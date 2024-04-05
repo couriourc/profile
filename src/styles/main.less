@@ -12,7 +12,7 @@
  ==================== */
 body {
   background-color: #f1f1f1;
-  font-size: 28upx;
+  font-size: 32*0.5px;
   color: #333333;
   font-family: Helvetica Neue, Helvetica, sans-serif;
 }
@@ -26,11 +26,11 @@ img {
 }
 
 .round {
-  border-radius: 5000upx;
+  border-radius: 5000*0.5px;
 }
 
 .radius {
-  border-radius: 6upx;
+  border-radius: 6*0.5px;
 }
 
 /* ==================
@@ -60,13 +60,13 @@ img.loading::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 32upx;
-  height: 32upx;
-  line-height: 32upx;
+  width: 32*0.5px;
+  height: 32*0.5px;
+  line-height: 32*0.5px;
   right: 0;
   bottom: 0;
   z-index: -1;
-  font-size: 32upx;
+  font-size: 32*0.5px;
   margin: auto;
   color: #ccc;
   -webkit-animation: cuIcon-spin 2s infinite linear;
@@ -130,97 +130,97 @@ img.loading::after {
 }
 
 .solid::after {
-  border: 1upx solid rgba(0, 0, 0, 0.1);
+  border: 1*0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .solid-top::after {
-  border-top: 1upx solid rgba(0, 0, 0, 0.1);
+  border-top: 1*0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .solid-right::after {
-  border-right: 1upx solid rgba(0, 0, 0, 0.1);
+  border-right: 1*0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .solid-bottom::after {
-  border-bottom: 1upx solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1*0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .solid-left::after {
-  border-left: 1upx solid rgba(0, 0, 0, 0.1);
+  border-left: 1*0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .solids::after {
-  border: 8upx solid #eee;
+  border: 8*0.5px solid #eee;
 }
 
 .solids-top::after {
-  border-top: 8upx solid #eee;
+  border-top: 8*0.5px solid #eee;
 }
 
 .solids-right::after {
-  border-right: 8upx solid #eee;
+  border-right: 8*0.5px solid #eee;
 }
 
 .solids-bottom::after {
-  border-bottom: 8upx solid #eee;
+  border-bottom: 8*0.5px solid #eee;
 }
 
 .solids-left::after {
-  border-left: 8upx solid #eee;
+  border-left: 8*0.5px solid #eee;
 }
 
 /* -- 虚线 -- */
 
 .dashed::after {
-  border: 1upx dashed #ddd;
+  border: 1*0.5px dashed #ddd;
 }
 
 .dashed-top::after {
-  border-top: 1upx dashed #ddd;
+  border-top: 1*0.5px dashed #ddd;
 }
 
 .dashed-right::after {
-  border-right: 1upx dashed #ddd;
+  border-right: 1*0.5px dashed #ddd;
 }
 
 .dashed-bottom::after {
-  border-bottom: 1upx dashed #ddd;
+  border-bottom: 1*0.5px dashed #ddd;
 }
 
 .dashed-left::after {
-  border-left: 1upx dashed #ddd;
+  border-left: 1*0.5px dashed #ddd;
 }
 
 /* -- 阴影 -- */
 
 .shadow[class*='white'] {
-  --ShadowSize: 0 1upx 6upx;
+  --ShadowSize: 0 1*0.5px 6*0.5px;
 }
 
 .shadow-lg {
-  --ShadowSize: 0upx 40upx 100upx 0upx;
+  --ShadowSize: 0*0.5px 40*0.5px 100*0.5px 0*0.5px;
 }
 
 .shadow-warp {
   position: relative;
-  box-shadow: 0 0 10upx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10*0.5px rgba(0, 0, 0, 0.1);
 }
 
 .shadow-warp:before,
 .shadow-warp:after {
   position: absolute;
   content: "";
-  top: 20upx;
-  bottom: 30upx;
-  left: 20upx;
+  top: 20*0.5px;
+  bottom: 30*0.5px;
+  left: 20*0.5px;
   width: 50%;
-  box-shadow: 0 30upx 20upx rgba(0, 0, 0, 0.2);
+  box-shadow: 0 30*0.5px 20*0.5px rgba(0, 0, 0, 0.2);
   transform: rotate(-3deg);
   z-index: -1;
 }
 
 .shadow-warp:after {
-  right: 20upx;
+  right: 20*0.5px;
   left: auto;
   transform: rotate(3deg);
 }
@@ -233,12 +233,12 @@ img.loading::after {
   content: "";
   display: block;
   background: inherit;
-  filter: blur(10upx);
+  filter: blur(10*0.5px);
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 10upx;
-  left: 10upx;
+  top: 10*0.5px;
+  left: 10*0.5px;
   z-index: -1;
   opacity: 0.4;
   transform-origin: 0 0;
@@ -252,20 +252,20 @@ img.loading::after {
 
 .cu-btn {
   position: relative;
-  border: 0upx;
+  border: 0*0.5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 30upx;
-  font-size: 28upx;
-  height: 64upx;
+  padding: 0 30*0.5px;
+  font-size: 28*0.5px;
+  height: 64*0.5px;
   line-height: 1;
   text-align: center;
   text-decoration: none;
   overflow: visible;
   margin-left: initial;
-  transform: translate(0upx, 0upx);
+  transform: translate(0*0.5px, 0*0.5px);
   margin-right: initial;
 }
 
@@ -289,21 +289,21 @@ img.loading::after {
   position: absolute;
   top: 0;
   left: 0;
-  border: 1upx solid currentColor;
+  border: 1*0.5px solid currentColor;
   transform: scale(0.5);
   transform-origin: 0 0;
   box-sizing: border-box;
-  border-radius: 12upx;
+  border-radius: 12*0.5px;
   z-index: 1;
   pointer-events: none;
 }
 
 .cu-btn.round[class*="line"]::after {
-  border-radius: 1000upx;
+  border-radius: 1000*0.5px;
 }
 
 .cu-btn[class*="lines"]::after {
-  border: 6upx solid currentColor;
+  border: 6*0.5px solid currentColor;
 }
 
 .cu-btn[class*="bg-"]::after {
@@ -311,43 +311,43 @@ img.loading::after {
 }
 
 .cu-btn.sm {
-  padding: 0 20upx;
-  font-size: 20upx;
-  height: 48upx;
+  padding: 0 20*0.5px;
+  font-size: 20*0.5px;
+  height: 48*0.5px;
 }
 
 .cu-btn.lg {
-  padding: 0 40upx;
-  font-size: 32upx;
-  height: 80upx;
+  padding: 0 40*0.5px;
+  font-size: 32*0.5px;
+  height: 80*0.5px;
 }
 
 .cu-btn.cuIcon.sm {
-  width: 48upx;
-  height: 48upx;
+  width: 48*0.5px;
+  height: 48*0.5px;
 }
 
 .cu-btn.cuIcon {
-  width: 64upx;
-  height: 64upx;
-  border-radius: 500upx;
+  width: 64*0.5px;
+  height: 64*0.5px;
+  border-radius: 500*0.5px;
   padding: 0;
 }
 
 button.cuIcon.lg {
-  width: 80upx;
-  height: 80upx;
+  width: 80*0.5px;
+  height: 80*0.5px;
 }
 
 .cu-btn.shadow-blur::before {
-  top: 4upx;
-  left: 4upx;
-  filter: blur(6upx);
+  top: 4*0.5px;
+  left: 4*0.5px;
+  filter: blur(6*0.5px);
   opacity: 0.6;
 }
 
 .cu-btn.button-hover {
-  transform: translate(1upx, 1upx);
+  transform: translate(1*0.5px, 1*0.5px);
 }
 
 .block {
@@ -368,15 +368,15 @@ button.cuIcon.lg {
  ==================== */
 
 .cu-tag {
-  font-size: 24upx;
+  font-size: 24*0.5px;
   vertical-align: middle;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0upx 16upx;
-  height: 48upx;
+  padding: 0*0.5px 16*0.5px;
+  height: 48*0.5px;
   font-family: Helvetica Neue, Helvetica, sans-serif;
   white-space: nowrap;
 }
@@ -392,7 +392,7 @@ button.cuIcon.lg {
   position: absolute;
   top: 0;
   left: 0;
-  border: 1upx solid currentColor;
+  border: 1*0.5px solid currentColor;
   transform: scale(0.5);
   transform-origin: 0 0;
   box-sizing: border-box;
@@ -402,11 +402,11 @@ button.cuIcon.lg {
 }
 
 .cu-tag.radius[class*="line"]::after {
-  border-radius: 12upx;
+  border-radius: 12*0.5px;
 }
 
 .cu-tag.round[class*="line"]::after {
-  border-radius: 1000upx;
+  border-radius: 1000*0.5px;
 }
 
 .cu-tag[class*="line-"]::after {
@@ -414,13 +414,13 @@ button.cuIcon.lg {
 }
 
 .cu-tag + .cu-tag {
-  margin-left: 10upx;
+  margin-left: 10*0.5px;
 }
 
 .cu-tag.sm {
-  font-size: 20upx;
-  padding: 0upx 12upx;
-  height: 32upx;
+  font-size: 20*0.5px;
+  padding: 0*0.5px 12*0.5px;
+  height: 32*0.5px;
 }
 
 .cu-capsule {
@@ -429,7 +429,7 @@ button.cuIcon.lg {
 }
 
 .cu-capsule + .cu-capsule {
-  margin-left: 10upx;
+  margin-left: 10*0.5px;
 }
 
 .cu-capsule .cu-tag {
@@ -437,45 +437,45 @@ button.cuIcon.lg {
 }
 
 .cu-capsule .cu-tag[class*="line-"]:last-child::after {
-  border-left: 0upx solid transparent;
+  border-left: 0*0.5px solid transparent;
 }
 
 .cu-capsule .cu-tag[class*="line-"]:first-child::after {
-  border-right: 0upx solid transparent;
+  border-right: 0*0.5px solid transparent;
 }
 
 .cu-capsule.radius .cu-tag:first-child {
-  border-top-left-radius: 6upx;
-  border-bottom-left-radius: 6upx;
+  border-top-left-radius: 6*0.5px;
+  border-bottom-left-radius: 6*0.5px;
 }
 
 .cu-capsule.radius .cu-tag:last-child::after,
 .cu-capsule.radius .cu-tag[class*="line-"] {
-  border-top-right-radius: 12upx;
-  border-bottom-right-radius: 12upx;
+  border-top-right-radius: 12*0.5px;
+  border-bottom-right-radius: 12*0.5px;
 }
 
 .cu-capsule.round .cu-tag:first-child {
-  border-top-left-radius: 200upx;
-  border-bottom-left-radius: 200upx;
-  text-indent: 4upx;
+  border-top-left-radius: 200*0.5px;
+  border-bottom-left-radius: 200*0.5px;
+  text-indent: 4*0.5px;
 }
 
 .cu-capsule.round .cu-tag:last-child::after,
 .cu-capsule.round .cu-tag:last-child {
-  border-top-right-radius: 200upx;
-  border-bottom-right-radius: 200upx;
-  text-indent: -4upx;
+  border-top-right-radius: 200*0.5px;
+  border-bottom-right-radius: 200*0.5px;
+  text-indent: -4*0.5px;
 }
 
 .cu-tag.badge {
-  border-radius: 200upx;
+  border-radius: 200*0.5px;
   position: absolute;
-  top: -10upx;
-  right: -10upx;
-  font-size: 20upx;
-  padding: 0upx 10upx;
-  height: 28upx;
+  top: -10*0.5px;
+  right: -10*0.5px;
+  font-size: 20*0.5px;
+  padding: 0*0.5px 10*0.5px;
+  height: 28*0.5px;
   color: #ffffff;
 }
 
@@ -484,18 +484,18 @@ button.cuIcon.lg {
 }
 
 .cu-tag:empty:not([class*="cuIcon-"]) {
-  padding: 0upx;
-  width: 16upx;
-  height: 16upx;
-  top: -4upx;
-  right: -4upx;
+  padding: 0*0.5px;
+  width: 16*0.5px;
+  height: 16*0.5px;
+  top: -4*0.5px;
+  right: -4*0.5px;
 }
 
 .cu-tag[class*="cuIcon-"] {
-  width: 32upx;
-  height: 32upx;
-  top: -4upx;
-  right: -4upx;
+  width: 32*0.5px;
+  height: 32*0.5px;
+  top: -4*0.5px;
+  right: -4*0.5px;
 }
 
 /* ==================
@@ -514,8 +514,8 @@ button.cuIcon.lg {
   color: #ffffff;
   white-space: nowrap;
   position: relative;
-  width: 64upx;
-  height: 64upx;
+  width: 64*0.5px;
+  height: 64*0.5px;
   background-size: cover;
   background-position: center;
   vertical-align: middle;
@@ -523,20 +523,20 @@ button.cuIcon.lg {
 }
 
 .cu-avatar.sm {
-  width: 48upx;
-  height: 48upx;
+  width: 48*0.5px;
+  height: 48*0.5px;
   font-size: 1em;
 }
 
 .cu-avatar.lg {
-  width: 96upx;
-  height: 96upx;
+  width: 96*0.5px;
+  height: 96*0.5px;
   font-size: 2em;
 }
 
 .cu-avatar.xl {
-  width: 128upx;
-  height: 128upx;
+  width: 128*0.5px;
+  height: 128*0.5px;
   font-size: 2.5em;
 }
 
@@ -547,19 +547,19 @@ button.cuIcon.lg {
 .cu-avatar-group {
   direction: rtl;
   unicode-bidi: bidi-override;
-  padding: 0 10upx 0 40upx;
+  padding: 0 10*0.5px 0 40*0.5px;
   display: inline-block;
 }
 
 .cu-avatar-group .cu-avatar {
-  margin-left: -30upx;
-  border: 4upx solid #f1f1f1;
+  margin-left: -30*0.5px;
+  border: 4*0.5px solid #f1f1f1;
   vertical-align: middle;
 }
 
 .cu-avatar-group .cu-avatar.sm {
-  margin-left: -20upx;
-  border: 1upx solid #f1f1f1;
+  margin-left: -20*0.5px;
+  border: 1*0.5px solid #f1f1f1;
 }
 
 /* ==================
@@ -568,7 +568,7 @@ button.cuIcon.lg {
 
 .cu-progress {
   overflow: hidden;
-  height: 28upx;
+  height: 28*0.5px;
   background-color: #ebeef5;
   display: inline-flex;
   align-items: center;
@@ -581,11 +581,11 @@ button.cuIcon.lg {
 }
 
 .cu-progress.xs {
-  height: 10upx;
+  height: 10*0.5px;
 }
 
 .cu-progress.sm {
-  height: 20upx;
+  height: 20*0.5px;
 }
 
 .cu-progress view {
@@ -595,7 +595,7 @@ button.cuIcon.lg {
   display: flex;
   justify-items: flex-end;
   justify-content: space-around;
-  font-size: 20upx;
+  font-size: 20*0.5px;
   color: #ffffff;
   transition: width 0.6s ease;
 }
@@ -603,18 +603,18 @@ button.cuIcon.lg {
 .cu-progress text {
   align-items: center;
   display: flex;
-  font-size: 20upx;
+  font-size: 20*0.5px;
   color: #333333;
-  text-indent: 10upx;
+  text-indent: 10*0.5px;
 }
 
 .cu-progress.text-progress {
-  padding-right: 60upx;
+  padding-right: 60*0.5px;
 }
 
 .cu-progress.striped view {
   background-img: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 72upx 72upx;
+  background-size: 72*0.5px 72*0.5px;
 }
 
 .cu-progress.active view {
@@ -623,7 +623,7 @@ button.cuIcon.lg {
 
 @keyframes progress-stripes {
   from {
-    background-position: 72upx 0;
+    background-position: 72*0.5px 0;
   }
 
   to {
@@ -644,7 +644,7 @@ button.cuIcon.lg {
 .cu-load::before {
   font-family: "cuIcon";
   display: inline-block;
-  margin-right: 6upx;
+  margin-right: 6*0.5px;
 }
 
 .cu-load.loading::before {
@@ -673,7 +673,7 @@ button.cuIcon.lg {
 }
 
 .cu-load.load-cuIcon::before {
-  font-size: 32upx;
+  font-size: 32*0.5px;
 }
 
 .cu-load.load-cuIcon::after {
@@ -688,30 +688,30 @@ button.cuIcon.lg {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 140upx;
+  bottom: 140*0.5px;
   left: 0;
   margin: auto;
-  width: 260upx;
-  height: 260upx;
+  width: 260*0.5px;
+  height: 260*0.5px;
   background-color: #ffffff;
-  border-radius: 10upx;
-  box-shadow: 0 0 0upx 2000upx rgba(0, 0, 0, 0.5);
+  border-radius: 10*0.5px;
+  box-shadow: 0 0 0*0.5px 2000*0.5px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  font-size: 28upx;
+  font-size: 28*0.5px;
   z-index: 9999;
   line-height: 2.4em;
 }
 
 .cu-load.load-modal [class*="cuIcon-"] {
-  font-size: 60upx;
+  font-size: 60*0.5px;
 }
 
 .cu-load.load-modal img {
-  width: 70upx;
-  height: 70upx;
+  width: 70*0.5px;
+  height: 70*0.5px;
 }
 
 .cu-load.load-modal::after {
@@ -719,13 +719,13 @@ button.cuIcon.lg {
   position: absolute;
   background-color: #ffffff;
   border-radius: 50%;
-  width: 200upx;
-  height: 200upx;
+  width: 200*0.5px;
+  height: 200*0.5px;
   font-size: 10px;
-  border-top: 6upx solid rgba(0, 0, 0, 0.05);
-  border-right: 6upx solid rgba(0, 0, 0, 0.05);
-  border-bottom: 6upx solid rgba(0, 0, 0, 0.05);
-  border-left: 6upx solid #f37b1d;
+  border-top: 6*0.5px solid rgba(0, 0, 0, 0.05);
+  border-right: 6*0.5px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 6*0.5px solid rgba(0, 0, 0, 0.05);
+  border-left: 6*0.5px solid #f37b1d;
   animation: cuIcon-spin 1s infinite linear;
   z-index: -1;
 }
@@ -746,15 +746,15 @@ button.cuIcon.lg {
 .load-progress .load-progress-bar {
   position: relative;
   width: 100%;
-  height: 4upx;
+  height: 4*0.5px;
   overflow: hidden;
   transition: all 200ms ease 0s;
 }
 
 .load-progress .load-progress-spinner {
   position: absolute;
-  top: 10upx;
-  right: 10upx;
+  top: 10*0.5px;
+  right: 10*0.5px;
   z-index: 2000;
   display: block;
 }
@@ -762,11 +762,11 @@ button.cuIcon.lg {
 .load-progress .load-progress-spinner::after {
   content: "";
   display: block;
-  width: 24upx;
-  height: 24upx;
+  width: 24*0.5px;
+  height: 24*0.5px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: solid 4upx transparent;
+  border: solid 4*0.5px transparent;
   border-top-color: inherit;
   border-left-color: inherit;
   border-radius: 50%;
@@ -806,23 +806,23 @@ button.cuIcon.lg {
 }
 
 .cu-list + .cu-list {
-  margin-top: 30upx
+  margin-top: 30*0.5px
 }
 
 .cu-list > .cu-item {
   transition: all .6s ease-in-out 0s;
-  transform: translateX(0upx)
+  transform: translateX(0*0.5px)
 }
 
 .cu-list > .cu-item.move-cur {
-  transform: translateX(-260upx)
+  transform: translateX(-260*0.5px)
 }
 
 .cu-list > .cu-item .move {
   position: absolute;
   right: 0;
   display: flex;
-  width: 260upx;
+  width: 260*0.5px;
   height: 100%;
   transform: translateX(100%)
 }
@@ -841,8 +841,8 @@ button.cuIcon.lg {
 .cu-list.menu-avatar > .cu-item {
   position: relative;
   display: flex;
-  padding-right: 10upx;
-  height: 140upx;
+  padding-right: 10*0.5px;
+  height: 140*0.5px;
   background-color: #ffffff;
   justify-content: flex-end;
   align-items: center
@@ -850,45 +850,45 @@ button.cuIcon.lg {
 
 .cu-list.menu-avatar > .cu-item > .cu-avatar {
   position: absolute;
-  left: 30upx
+  left: 30*0.5px
 }
 
 .cu-list.menu-avatar > .cu-item .flex .text-cut {
-  max-width: 510upx
+  max-width: 510*0.5px
 }
 
 .cu-list.menu-avatar > .cu-item .content {
   position: absolute;
-  left: 146upx;
-  width: calc(100% - 96upx - 60upx - 120upx - 20upx);
+  left: 146*0.5px;
+  width: calc(100% - 96*0.5px - 60*0.5px - 120*0.5px - 20*0.5px);
   line-height: 1.6em;
 }
 
 .cu-list.menu-avatar > .cu-item .content.flex-sub {
-  width: calc(100% - 96upx - 60upx - 20upx);
+  width: calc(100% - 96*0.5px - 60*0.5px - 20*0.5px);
 }
 
 .cu-list.menu-avatar > .cu-item .content > view:first-child {
-  font-size: 30upx;
+  font-size: 30*0.5px;
   display: flex;
   align-items: center
 }
 
 .cu-list.menu-avatar > .cu-item .content .cu-tag.sm {
   display: inline-block;
-  margin-left: 10upx;
-  height: 28upx;
-  font-size: 16upx;
-  line-height: 32upx
+  margin-left: 10*0.5px;
+  height: 28*0.5px;
+  font-size: 16*0.5px;
+  line-height: 32*0.5px
 }
 
 .cu-list.menu-avatar > .cu-item .action {
-  width: 100upx;
+  width: 100*0.5px;
   text-align: center
 }
 
 .cu-list.menu-avatar > .cu-item .action view + view {
-  margin-top: 10upx
+  margin-top: 10*0.5px
 }
 
 .cu-list.menu-avatar.comment > .cu-item .content {
@@ -899,7 +899,7 @@ button.cuIcon.lg {
 }
 
 .cu-list.menu-avatar.comment > .cu-item {
-  padding: 30upx 30upx 30upx 120upx;
+  padding: 30*0.5px 30*0.5px 30*0.5px 120*0.5px;
   height: auto
 }
 
@@ -910,8 +910,8 @@ button.cuIcon.lg {
 .cu-list.menu > .cu-item {
   position: relative;
   display: flex;
-  padding: 0 30upx;
-  min-height: 100upx;
+  padding: 0 30*0.5px;
+  min-height: 100*0.5px;
   background-color: #ffffff;
   justify-content: space-between;
   align-items: center
@@ -929,7 +929,7 @@ button.cuIcon.lg {
   box-sizing: border-box;
   width: 200%;
   height: 200%;
-  border-bottom: 1upx solid #ddd;
+  border-bottom: 1*0.5px solid #ddd;
   border-radius: inherit;
   content: " ";
   transform: scale(.5);
@@ -946,24 +946,24 @@ button.cuIcon.lg {
 }
 
 .cu-list.menu > .cu-item.arrow {
-  padding-right: 90upx
+  padding-right: 90*0.5px
 }
 
 .cu-list.menu > .cu-item.arrow:before {
   position: absolute;
   top: 0;
-  right: 30upx;
+  right: 30*0.5px;
   bottom: 0;
   display: block;
   margin: auto;
-  width: 30upx;
-  height: 30upx;
+  width: 30*0.5px;
+  height: 30*0.5px;
   color: #8799a3;
   content: "\e6a3";
   text-align: center;
-  font-size: 34upx;
+  font-size: 34*0.5px;
   font-family: cuIcon;
-  line-height: 30upx
+  line-height: 30*0.5px
 }
 
 .cu-list.menu > .cu-item button.content {
@@ -987,35 +987,35 @@ button.cuIcon.lg {
 
 .cu-list.menu > .cu-item .content > text[class*=cuIcon] {
   display: inline-block;
-  margin-right: 10upx;
+  margin-right: 10*0.5px;
   width: 1.6em;
   text-align: center
 }
 
 .cu-list.menu > .cu-item .content > img {
   display: inline-block;
-  margin-right: 10upx;
+  margin-right: 10*0.5px;
   width: 1.6em;
   height: 1.6em;
   vertical-align: middle
 }
 
 .cu-list.menu > .cu-item .content {
-  font-size: 30upx;
+  font-size: 30*0.5px;
   line-height: 1.6em;
   flex: 1
 }
 
 .cu-list.menu > .cu-item .content .cu-tag.sm {
   display: inline-block;
-  margin-left: 10upx;
-  height: 28upx;
-  font-size: 16upx;
-  line-height: 32upx
+  margin-left: 10*0.5px;
+  height: 28*0.5px;
+  font-size: 16*0.5px;
+  line-height: 32*0.5px
 }
 
 .cu-list.menu > .cu-item .action .cu-tag:empty {
-  right: 10upx
+  right: 10*0.5px
 }
 
 .cu-list.menu {
@@ -1024,14 +1024,14 @@ button.cuIcon.lg {
 }
 
 .cu-list.menu.sm-border > .cu-item:after {
-  left: 30upx;
-  width: calc(200% - 120upx)
+  left: 30*0.5px;
+  width: calc(200% - 120*0.5px)
 }
 
 .cu-list.grid > .cu-item {
   position: relative;
   display: flex;
-  padding: 20upx 0 30upx;
+  padding: 20*0.5px 0 30*0.5px;
   transition-duration: 0s;
   flex-direction: column
 }
@@ -1054,24 +1054,24 @@ button.cuIcon.lg {
 
 .cu-list.grid > .cu-item text {
   display: block;
-  margin-top: 10upx;
+  margin-top: 10*0.5px;
   color: #888;
-  font-size: 26upx;
-  line-height: 40upx
+  font-size: 26*0.5px;
+  line-height: 40*0.5px
 }
 
 .cu-list.grid > .cu-item [class*=cuIcon] {
   position: relative;
   display: block;
-  margin-top: 20upx;
+  margin-top: 20*0.5px;
   width: 100%;
-  font-size: 48upx
+  font-size: 48*0.5px
 }
 
 .cu-list.grid > .cu-item .cu-tag {
   right: auto;
   left: 50%;
-  margin-left: 20upx
+  margin-left: 20*0.5px
 }
 
 .cu-list.grid {
@@ -1080,8 +1080,8 @@ button.cuIcon.lg {
 }
 
 .cu-list.grid.no-border > .cu-item {
-  padding-top: 10upx;
-  padding-bottom: 20upx
+  padding-top: 10*0.5px;
+  padding-bottom: 20*0.5px
 }
 
 .cu-list.grid.no-border > .cu-item:after {
@@ -1089,7 +1089,7 @@ button.cuIcon.lg {
 }
 
 .cu-list.grid.no-border {
-  padding: 20upx 10upx
+  padding: 20*0.5px 10*0.5px
 }
 
 .cu-list.grid.col-3 > .cu-item:nth-child(3n):after,
@@ -1100,9 +1100,9 @@ button.cuIcon.lg {
 
 .cu-list.card-menu {
   overflow: hidden;
-  margin-right: 30upx;
-  margin-left: 30upx;
-  border-radius: 20upx
+  margin-right: 30*0.5px;
+  margin-left: 30*0.5px;
+  border-radius: 20*0.5px
 }
 
 
@@ -1114,7 +1114,7 @@ button.cuIcon.lg {
   display: flex;
   position: relative;
   align-items: center;
-  min-height: 100upx;
+  min-height: 100*0.5px;
   justify-content: space-between;
 }
 
@@ -1128,14 +1128,14 @@ button.cuIcon.lg {
 
 .cu-bar .action.border-title {
   position: relative;
-  top: -10upx;
+  top: -10*0.5px;
 }
 
 .cu-bar .action.border-title text[class*="bg-"]:last-child {
   position: absolute;
   bottom: -0.5rem;
   min-width: 2rem;
-  height: 6upx;
+  height: 6*0.5px;
   left: 0;
 }
 
@@ -1153,7 +1153,7 @@ button.cuIcon.lg {
   position: absolute;
   display: inline-block;
   bottom: -0.2rem;
-  border-radius: 6upx;
+  border-radius: 6*0.5px;
   width: 100%;
   height: 0.6rem;
   left: 0.6rem;
@@ -1170,7 +1170,7 @@ button.cuIcon.lg {
   z-index: 0;
   text-align: right;
   font-weight: 900;
-  font-size: 36upx;
+  font-size: 36*0.5px;
 }
 
 .cu-bar.justify-center .action.border-title text:last-child,
@@ -1182,8 +1182,8 @@ button.cuIcon.lg {
 }
 
 .cu-bar .action:first-child {
-  margin-left: 30upx;
-  font-size: 30upx;
+  margin-left: 30*0.5px;
+  font-size: 30*0.5px;
 }
 
 .cu-bar .action text.text-cut {
@@ -1192,7 +1192,7 @@ button.cuIcon.lg {
 }
 
 .cu-bar .cu-avatar:first-child {
-  margin-left: 20upx;
+  margin-left: 20*0.5px;
 }
 
 .cu-bar .action:first-child > text[class*="cuIcon-"] {
@@ -1201,12 +1201,12 @@ button.cuIcon.lg {
 }
 
 .cu-bar .action:last-child {
-  margin-right: 30upx;
+  margin-right: 30*0.5px;
 }
 
 .cu-bar .action > text[class*="cuIcon-"],
 .cu-bar .action > view[class*="cuIcon-"] {
-  font-size: 36upx;
+  font-size: 36*0.5px;
 }
 
 .cu-bar .action > text[class*="cuIcon-"] + text[class*="cuIcon-"] {
@@ -1216,15 +1216,15 @@ button.cuIcon.lg {
 .cu-bar .content {
   position: absolute;
   text-align: center;
-  width: calc(100% - 340upx);
+  width: calc(100% - 340*0.5px);
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
   margin: auto;
-  height: 60upx;
-  font-size: 32upx;
-  line-height: 60upx;
+  height: 60*0.5px;
+  font-size: 32*0.5px;
+  line-height: 60*0.5px;
   cursor: none;
   pointer-events: none;
   text-overflow: ellipsis;
@@ -1235,7 +1235,7 @@ button.cuIcon.lg {
 .cu-bar.ios .content {
   bottom: 7px;
   height: 30px;
-  font-size: 32upx;
+  font-size: 32*0.5px;
   line-height: 30px;
 }
 
@@ -1244,37 +1244,37 @@ button.cuIcon.lg {
 }
 
 .cu-bar.btn-group button {
-  padding: 20upx 32upx;
+  padding: 20*0.5px 32*0.5px;
 }
 
 .cu-bar.btn-group button {
   flex: 1;
-  margin: 0 20upx;
+  margin: 0 20*0.5px;
   max-width: 50%;
 }
 
 .cu-bar .search-form {
   background-color: #f5f5f5;
-  line-height: 64upx;
-  height: 64upx;
-  font-size: 24upx;
+  line-height: 64*0.5px;
+  height: 64*0.5px;
+  font-size: 24*0.5px;
   color: #333333;
   flex: 1;
   display: flex;
   align-items: center;
-  margin: 0 30upx;
+  margin: 0 30*0.5px;
 }
 
 .cu-bar .search-form + .action {
-  margin-right: 30upx;
+  margin-right: 30*0.5px;
 }
 
 .cu-bar .search-form input {
   flex: 1;
-  padding-right: 30upx;
-  height: 64upx;
-  line-height: 64upx;
-  font-size: 26upx;
+  padding-right: 30*0.5px;
+  height: 64*0.5px;
+  line-height: 64*0.5px;
+  font-size: 26*0.5px;
   background-color: transparent;
 }
 
@@ -1283,7 +1283,7 @@ button.cuIcon.lg {
 }
 
 .cu-bar .search-form [class*="cuIcon-"]::before {
-  top: 0upx;
+  top: 0*0.5px;
 }
 
 .cu-bar.fixed,
@@ -1292,7 +1292,7 @@ button.cuIcon.lg {
   width: 100%;
   top: 0;
   z-index: 1024;
-  box-shadow: 0 1upx 6upx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1*0.5px 6*0.5px rgba(0, 0, 0, 0.1);
 }
 
 .cu-bar.foot {
@@ -1300,26 +1300,26 @@ button.cuIcon.lg {
   width: 100%;
   bottom: 0;
   z-index: 1024;
-  box-shadow: 0 -1upx 6upx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1*0.5px 6*0.5px rgba(0, 0, 0, 0.1);
 }
 
 .cu-bar.tabbar {
   padding: 0;
-  height: calc(100upx + env(safe-area-inset-bottom) / 2);
+  height: calc(100*0.5px + env(safe-area-inset-bottom) / 2);
   padding-bottom: calc(env(safe-area-inset-bottom) / 2);
 }
 
 .cu-tabbar-height {
-  min-height: 100upx;
-  height: calc(100upx + env(safe-area-inset-bottom) / 2);
+  min-height: 100*0.5px;
+  height: calc(100*0.5px + env(safe-area-inset-bottom) / 2);
 }
 
 .cu-bar.tabbar.shadow {
-  box-shadow: 0 -1upx 6upx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1*0.5px 6*0.5px rgba(0, 0, 0, 0.1);
 }
 
 .cu-bar.tabbar .action {
-  font-size: 22upx;
+  font-size: 22*0.5px;
   position: relative;
   flex: 1;
   text-align: center;
@@ -1333,25 +1333,25 @@ button.cuIcon.lg {
 }
 
 .cu-bar.tabbar.shop .action {
-  width: 140upx;
+  width: 140*0.5px;
   flex: initial;
 }
 
 .cu-bar.tabbar .action.add-action {
   position: relative;
   z-index: 2;
-  padding-top: 50upx;
+  padding-top: 50*0.5px;
 }
 
 .cu-bar.tabbar .action.add-action [class*="cuIcon-"] {
   position: absolute;
-  width: 70upx;
+  width: 70*0.5px;
   z-index: 2;
-  height: 70upx;
+  height: 70*0.5px;
   border-radius: 50%;
-  line-height: 70upx;
-  font-size: 50upx;
-  top: -35upx;
+  line-height: 70*0.5px;
+  font-size: 50*0.5px;
+  top: -35*0.5px;
   left: 0;
   right: 0;
   margin: auto;
@@ -1361,14 +1361,14 @@ button.cuIcon.lg {
 .cu-bar.tabbar .action.add-action::after {
   content: "";
   position: absolute;
-  width: 100upx;
-  height: 100upx;
-  top: -50upx;
+  width: 100*0.5px;
+  height: 100*0.5px;
+  top: -50*0.5px;
   left: 0;
   right: 0;
   margin: auto;
-  box-shadow: 0 -3upx 8upx rgba(0, 0, 0, 0.08);
-  border-radius: 50upx;
+  box-shadow: 0 -3*0.5px 8*0.5px rgba(0, 0, 0, 0.08);
+  border-radius: 50*0.5px;
   background-color: inherit;
   z-index: 0;
 }
@@ -1376,9 +1376,9 @@ button.cuIcon.lg {
 .cu-bar.tabbar .action.add-action::before {
   content: "";
   position: absolute;
-  width: 100upx;
-  height: 30upx;
-  bottom: 30upx;
+  width: 100*0.5px;
+  height: 30*0.5px;
+  bottom: 30*0.5px;
   left: 0;
   right: 0;
   margin: auto;
@@ -1391,7 +1391,7 @@ button.cuIcon.lg {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 10upx;
+  padding: 0 10*0.5px;
 }
 
 .cu-bar.tabbar button.action::after {
@@ -1399,13 +1399,13 @@ button.cuIcon.lg {
 }
 
 .cu-bar.tabbar .action [class*="cuIcon-"] {
-  width: 100upx;
+  width: 100*0.5px;
   position: relative;
   display: block;
   height: auto;
-  margin: 0 auto 10upx;
+  margin: 0 auto 10*0.5px;
   text-align: center;
-  font-size: 40upx;
+  font-size: 40*0.5px;
 }
 
 .cu-bar.tabbar .action .cuIcon-cu-img {
@@ -1413,8 +1413,8 @@ button.cuIcon.lg {
 }
 
 .cu-bar.tabbar .action .cuIcon-cu-img img {
-  width: 50upx;
-  height: 50upx;
+  width: 50*0.5px;
+  height: 50*0.5px;
   display: inline-block;
 }
 
@@ -1445,7 +1445,7 @@ button.cuIcon.lg {
   left: 0;
   transform: scale(0.5);
   transform-origin: 0 0;
-  border-right: 1upx solid rgba(0, 0, 0, 0.1);
+  border-right: 1*0.5px solid rgba(0, 0, 0, 0.1);
   z-index: 3;
 }
 
@@ -1454,35 +1454,35 @@ button.cuIcon.lg {
 }
 
 .cu-bar.input {
-  padding-right: 20upx;
+  padding-right: 20*0.5px;
   background-color: #ffffff;
 }
 
 .cu-bar.input input {
   overflow: initial;
-  line-height: 64upx;
-  height: 64upx;
-  min-height: 64upx;
+  line-height: 64*0.5px;
+  height: 64*0.5px;
+  min-height: 64*0.5px;
   flex: 1;
-  font-size: 30upx;
-  margin: 0 20upx;
+  font-size: 30*0.5px;
+  margin: 0 20*0.5px;
 }
 
 .cu-bar.input .action {
-  margin-left: 20upx;
+  margin-left: 20*0.5px;
 }
 
 .cu-bar.input .action [class*="cuIcon-"] {
-  font-size: 48upx;
+  font-size: 48*0.5px;
 }
 
 .cu-bar.input input + .action {
-  margin-right: 20upx;
-  margin-left: 0upx;
+  margin-right: 20*0.5px;
+  margin-left: 0*0.5px;
 }
 
 .cu-bar.input .action:first-child [class*="cuIcon-"] {
-  margin-left: 0upx;
+  margin-left: 0*0.5px;
 }
 
 .cu-custom {
@@ -1491,7 +1491,7 @@ button.cuIcon.lg {
 }
 
 .cu-custom .cu-bar .content {
-  width: calc(100% - 440upx);
+  width: calc(100% - 440*0.5px);
 }
 
 /* #ifdef MP-ALIPAY */
@@ -1502,26 +1502,26 @@ button.cuIcon.lg {
 /* #endif */
 
 .cu-custom .cu-bar .content img {
-  height: 60upx;
-  width: 240upx;
+  height: 60*0.5px;
+  width: 240*0.5px;
 }
 
 .cu-custom .cu-bar {
   min-height: 0px;
   /* #ifdef MP-WEIXIN */
-  padding-right: 220upx;
+  padding-right: 220*0.5px;
   /* #endif */
   /* #ifdef MP-ALIPAY */
-  padding-right: 150upx;
+  padding-right: 150*0.5px;
   /* #endif */
-  box-shadow: 0upx 0upx 0upx;
+  box-shadow: 0*0.5px 0*0.5px 0*0.5px;
   z-index: 9999;
 }
 
 .cu-custom .cu-bar .border-custom {
   position: relative;
   background: rgba(0, 0, 0, 0.15);
-  border-radius: 1000upx;
+  border-radius: 1000*0.5px;
   height: 30px;
 }
 
@@ -1537,13 +1537,13 @@ button.cuIcon.lg {
   transform-origin: 0 0;
   pointer-events: none;
   box-sizing: border-box;
-  border: 1upx solid #ffffff;
+  border: 1*0.5px solid #ffffff;
   opacity: 0.5;
 }
 
 .cu-custom .cu-bar .border-custom::before {
   content: " ";
-  width: 1upx;
+  width: 1*0.5px;
   height: 110%;
   position: absolute;
   top: 22.5%;
@@ -1563,7 +1563,7 @@ button.cuIcon.lg {
   flex: 1;
   margin: auto !important;
   text-align: center;
-  font-size: 34upx;
+  font-size: 34*0.5px;
 }
 
 /* ==================
@@ -1579,15 +1579,15 @@ button.cuIcon.lg {
 }
 
 .nav .cu-item {
-  height: 90upx;
+  height: 90*0.5px;
   display: inline-block;
-  line-height: 90upx;
-  margin: 0 10upx;
-  padding: 0 20upx;
+  line-height: 90*0.5px;
+  margin: 0 10*0.5px;
+  padding: 0 20*0.5px;
 }
 
 .nav .cu-item.cur {
-  border-bottom: 4upx solid;
+  border-bottom: 4*0.5px solid;
 }
 
 /* ==================
@@ -1600,16 +1600,16 @@ button.cuIcon.lg {
 }
 
 .cu-timeline .cu-time {
-  width: 120upx;
+  width: 120*0.5px;
   text-align: center;
-  padding: 20upx 0;
-  font-size: 26upx;
+  padding: 20*0.5px 0;
+  font-size: 26*0.5px;
   color: #888;
   display: block;
 }
 
 .cu-timeline > .cu-item {
-  padding: 30upx 30upx 30upx 120upx;
+  padding: 30*0.5px 30*0.5px 30*0.5px 120*0.5px;
   position: relative;
   display: block;
   z-index: 0;
@@ -1623,9 +1623,9 @@ button.cuIcon.lg {
   content: "";
   display: block;
   position: absolute;
-  width: 1upx;
+  width: 1*0.5px;
   background-color: #ddd;
-  left: 60upx;
+  left: 60*0.5px;
   height: 100%;
   top: 0;
   z-index: 8;
@@ -1635,15 +1635,15 @@ button.cuIcon.lg {
   font-family: "cuIcon";
   display: block;
   position: absolute;
-  top: 36upx;
+  top: 36*0.5px;
   z-index: 9;
   background-color: #ffffff;
-  width: 50upx;
-  height: 50upx;
+  width: 50*0.5px;
+  height: 50*0.5px;
   text-align: center;
   border: none;
-  line-height: 50upx;
-  left: 36upx;
+  line-height: 50*0.5px;
+  left: 36*0.5px;
 }
 
 .cu-timeline > .cu-item:not([class*="cuIcon-"])::before {
@@ -1652,17 +1652,17 @@ button.cuIcon.lg {
 
 .cu-timeline > .cu-item[class*="cuIcon-"]::before {
   background-color: #ffffff;
-  width: 50upx;
-  height: 50upx;
+  width: 50*0.5px;
+  height: 50*0.5px;
   text-align: center;
   border: none;
-  line-height: 50upx;
-  left: 36upx;
+  line-height: 50*0.5px;
+  left: 36*0.5px;
 }
 
 .cu-timeline > .cu-item > .content {
-  padding: 30upx;
-  border-radius: 6upx;
+  padding: 30*0.5px;
+  border-radius: 6*0.5px;
   display: block;
   line-height: 1.6;
 }
@@ -1673,7 +1673,7 @@ button.cuIcon.lg {
 }
 
 .cu-timeline > .cu-item > .content + .content {
-  margin-top: 20upx;
+  margin-top: 20*0.5px;
 }
 
 /* ==================
@@ -1687,36 +1687,36 @@ button.cuIcon.lg {
 
 .cu-chat .cu-item {
   display: flex;
-  padding: 30upx 30upx 70upx;
+  padding: 30*0.5px 30*0.5px 70*0.5px;
   position: relative;
 }
 
 .cu-chat .cu-item > .cu-avatar {
-  width: 80upx;
-  height: 80upx;
+  width: 80*0.5px;
+  height: 80*0.5px;
 }
 
 .cu-chat .cu-item > .main {
-  max-width: calc(100% - 260upx);
-  margin: 0 40upx;
+  max-width: calc(100% - 260*0.5px);
+  margin: 0 40*0.5px;
   display: flex;
   align-items: center;
 }
 
 .cu-chat .cu-item > img {
-  height: 320upx;
+  height: 320*0.5px;
 }
 
 .cu-chat .cu-item > .main .content {
-  padding: 20upx;
-  border-radius: 6upx;
+  padding: 20*0.5px;
+  border-radius: 6*0.5px;
   display: inline-flex;
   max-width: 100%;
   align-items: center;
-  font-size: 30upx;
+  font-size: 30*0.5px;
   position: relative;
-  min-height: 80upx;
-  line-height: 40upx;
+  min-height: 80*0.5px;
+  line-height: 40*0.5px;
   text-align: left;
 }
 
@@ -1727,53 +1727,53 @@ button.cuIcon.lg {
 
 .cu-chat .cu-item .date {
   position: absolute;
-  font-size: 24upx;
+  font-size: 24*0.5px;
   color: #8799a3;
-  width: calc(100% - 320upx);
-  bottom: 20upx;
-  left: 160upx;
+  width: calc(100% - 320*0.5px);
+  bottom: 20*0.5px;
+  left: 160*0.5px;
 }
 
 .cu-chat .cu-item .action {
-  padding: 0 30upx;
+  padding: 0 30*0.5px;
   display: flex;
   align-items: center;
 }
 
 .cu-chat .cu-item > .main .content::after {
   content: "";
-  top: 27upx;
+  top: 27*0.5px;
   transform: rotate(45deg);
   position: absolute;
   z-index: 100;
   display: inline-block;
   overflow: hidden;
-  width: 24upx;
-  height: 24upx;
-  left: -12upx;
+  width: 24*0.5px;
+  height: 24*0.5px;
+  left: -12*0.5px;
   right: initial;
   background-color: inherit;
 }
 
 .cu-chat .cu-item.self > .main .content::after {
   left: auto;
-  right: -12upx;
+  right: -12*0.5px;
 }
 
 .cu-chat .cu-item > .main .content::before {
   content: "";
-  top: 30upx;
+  top: 30*0.5px;
   transform: rotate(45deg);
   position: absolute;
   z-index: -1;
   display: inline-block;
   overflow: hidden;
-  width: 24upx;
-  height: 24upx;
-  left: -12upx;
+  width: 24*0.5px;
+  height: 24*0.5px;
+  left: -12*0.5px;
   right: initial;
   background-color: inherit;
-  filter: blur(5upx);
+  filter: blur(5*0.5px);
   opacity: 0.3;
 }
 
@@ -1784,7 +1784,7 @@ button.cuIcon.lg {
 
 .cu-chat .cu-item.self > .main .content::before {
   left: auto;
-  right: -12upx;
+  right: -12*0.5px;
 }
 
 .cu-chat .cu-item.self {
@@ -1794,13 +1794,13 @@ button.cuIcon.lg {
 
 .cu-chat .cu-info {
   display: inline-block;
-  margin: 20upx auto;
-  font-size: 24upx;
-  padding: 8upx 12upx;
+  margin: 20*0.5px auto;
+  font-size: 24*0.5px;
+  padding: 8*0.5px 12*0.5px;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 6upx;
+  border-radius: 6*0.5px;
   color: #ffffff;
-  max-width: 400upx;
+  max-width: 400*0.5px;
   line-height: 1.4;
 }
 
@@ -1817,8 +1817,8 @@ button.cuIcon.lg {
   display: block;
   background-color: #ffffff;
   overflow: hidden;
-  border-radius: 10upx;
-  margin: 30upx;
+  border-radius: 10*0.5px;
+  margin: 30*0.5px;
 }
 
 .cu-card > .cu-item.shadow-blur {
@@ -1826,12 +1826,12 @@ button.cuIcon.lg {
 }
 
 .cu-card.no-card > .cu-item {
-  margin: 0upx;
-  border-radius: 0upx;
+  margin: 0*0.5px;
+  border-radius: 0*0.5px;
 }
 
 .cu-card .grid.grid-square {
-  margin-bottom: -20upx;
+  margin-bottom: -20*0.5px;
 }
 
 .cu-card.case .img {
@@ -1853,13 +1853,13 @@ button.cuIcon.lg {
   bottom: 0;
   width: 100%;
   background-color: transparent;
-  padding: 0upx 30upx;
+  padding: 0*0.5px 30*0.5px;
 }
 
 .cu-card.case.no-card .img {
-  margin: 30upx 30upx 0;
+  margin: 30*0.5px 30*0.5px 0;
   overflow: hidden;
-  border-radius: 10upx;
+  border-radius: 10*0.5px;
 }
 
 .cu-card.dynamic {
@@ -1873,30 +1873,30 @@ button.cuIcon.lg {
 }
 
 .cu-card.dynamic > .cu-item > .text-content {
-  padding: 0 30upx 0;
+  padding: 0 30*0.5px 0;
   max-height: 6.4em;
   overflow: hidden;
-  font-size: 30upx;
-  margin-bottom: 20upx;
+  font-size: 30*0.5px;
+  margin-bottom: 20*0.5px;
 }
 
 .cu-card.dynamic > .cu-item .square-img {
   width: 100%;
-  height: 200upx;
-  border-radius: 6upx;
+  height: 200*0.5px;
+  border-radius: 6*0.5px;
 }
 
 .cu-card.dynamic > .cu-item .only-img {
   width: 100%;
-  height: 320upx;
-  border-radius: 6upx;
+  height: 320*0.5px;
+  border-radius: 6*0.5px;
 }
 
 /* card.dynamic>.cu-item .comment {
-  padding: 20upx;
+  padding: 20*0.5px;
   background-color: #f1f1f1;
-  margin: 0 30upx 30upx;
-  border-radius: 6upx;
+  margin: 0 30*0.5px 30*0.5px;
+  border-radius: 6*0.5px;
 } */
 
 .cu-card.article {
@@ -1904,27 +1904,27 @@ button.cuIcon.lg {
 }
 
 .cu-card.article > .cu-item {
-  padding-bottom: 30upx;
+  padding-bottom: 30*0.5px;
 }
 
 .cu-card.article > .cu-item .title {
-  font-size: 30upx;
+  font-size: 30*0.5px;
   font-weight: 900;
   color: #333333;
-  line-height: 100upx;
-  padding: 0 30upx;
+  line-height: 100*0.5px;
+  padding: 0 30*0.5px;
 }
 
 .cu-card.article > .cu-item .content {
   display: flex;
-  padding: 0 30upx;
+  padding: 0 30*0.5px;
 }
 
 .cu-card.article > .cu-item .content > img {
-  width: 240upx;
+  width: 240*0.5px;
   height: 6.4em;
-  margin-right: 20upx;
-  border-radius: 6upx;
+  margin-right: 20*0.5px;
+  border-radius: 6*0.5px;
 }
 
 .cu-card.article > .cu-item .content .desc {
@@ -1935,7 +1935,7 @@ button.cuIcon.lg {
 }
 
 .cu-card.article > .cu-item .content .text-content {
-  font-size: 28upx;
+  font-size: 28*0.5px;
   color: #888;
   height: 4.8em;
   overflow: hidden;
@@ -1947,65 +1947,65 @@ button.cuIcon.lg {
 
 .cu-form-group {
   background-color: #ffffff;
-  padding: 1upx 30upx;
+  padding: 1*0.5px 30*0.5px;
   display: flex;
   align-items: center;
-  min-height: 100upx;
+  min-height: 100*0.5px;
   justify-content: space-between;
 }
 
 .cu-form-group + .cu-form-group {
-  border-top: 1upx solid #eee;
+  border-top: 1*0.5px solid #eee;
 }
 
 .cu-form-group .title {
   text-align: justify;
-  padding-right: 30upx;
-  font-size: 30upx;
+  padding-right: 30*0.5px;
+  font-size: 30*0.5px;
   position: relative;
-  height: 60upx;
-  line-height: 60upx;
+  height: 60*0.5px;
+  line-height: 60*0.5px;
 }
 
 .cu-form-group input {
   flex: 1;
-  font-size: 30upx;
+  font-size: 30*0.5px;
   color: #555;
-  padding-right: 20upx;
+  padding-right: 20*0.5px;
 }
 
 .cu-form-group > text[class*="cuIcon-"] {
-  font-size: 36upx;
+  font-size: 36*0.5px;
   padding: 0;
   box-sizing: border-box;
 }
 
 .cu-form-group textarea {
-  margin: 32upx 0 30upx;
+  margin: 32*0.5px 0 30*0.5px;
   height: 4.6em;
   width: 100%;
   line-height: 1.2em;
   flex: 1;
-  font-size: 28upx;
+  font-size: 28*0.5px;
   padding: 0;
 }
 
 .cu-form-group.align-start .title {
   height: 1em;
-  margin-top: 32upx;
+  margin-top: 32*0.5px;
   line-height: 1em;
 }
 
 .cu-form-group picker {
   flex: 1;
-  padding-right: 40upx;
+  padding-right: 40*0.5px;
   overflow: hidden;
   position: relative;
 }
 
 .cu-form-group picker .picker {
-  line-height: 100upx;
-  font-size: 28upx;
+  line-height: 100*0.5px;
+  font-size: 28*0.5px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -2018,14 +2018,14 @@ button.cuIcon.lg {
   display: block;
   content: "\e6a3";
   position: absolute;
-  font-size: 34upx;
+  font-size: 34*0.5px;
   color: #8799a3;
-  line-height: 100upx;
-  width: 60upx;
+  line-height: 100*0.5px;
+  width: 60*0.5px;
   text-align: center;
   top: 0;
   bottom: 0;
-  right: -20upx;
+  right: -20*0.5px;
   margin: auto;
 }
 
@@ -2051,7 +2051,7 @@ button.cuIcon.lg {
   -ms-transform: scale(1.185);
   transform: scale(1.185);
   backface-visibility: hidden;
-  perspective: 2000upx;
+  perspective: 2000*0.5px;
   background: rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease-in-out 0s;
   pointer-events: none;
@@ -2080,10 +2080,10 @@ button.cuIcon.lg {
   vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
-  width: 680upx;
+  width: 680*0.5px;
   max-width: 100%;
   background-color: #f8f8f8;
-  border-radius: 10upx;
+  border-radius: 10*0.5px;
   overflow: hidden;
 }
 
@@ -2097,7 +2097,7 @@ button.cuIcon.lg {
 }
 
 .cu-modal.bottom-modal {
-  margin-bottom: -1000upx;
+  margin-bottom: -1000*0.5px;
 }
 
 .cu-modal.bottom-modal.show {
@@ -2111,7 +2111,7 @@ button.cuIcon.lg {
 
 .cu-modal.drawer-modal .cu-dialog {
   height: 100%;
-  min-width: 200upx;
+  min-width: 200*0.5px;
   border-radius: 0;
   margin: initial;
   transition-duration: 0.3s;
@@ -2140,8 +2140,8 @@ button.cuIcon.lg {
  ==================== */
 swiper .a-swiper-dot {
   display: inline-block;
-  width: 16upx;
-  height: 16upx;
+  width: 16*0.5px;
+  height: 16*0.5px;
   background: rgba(0, 0, 0, .3);
   border-radius: 50%;
   vertical-align: middle;
@@ -2161,26 +2161,26 @@ swiper.square-dot .a-swiper-dot,
 swiper.square-dot .uni-swiper-dot {
   background-color: #ffffff;
   opacity: 0.4;
-  width: 10upx;
-  height: 10upx;
-  border-radius: 20upx;
-  margin: 0 8upx !important;
+  width: 10*0.5px;
+  height: 10*0.5px;
+  border-radius: 20*0.5px;
+  margin: 0 8*0.5px !important;
 }
 
 swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active,
 swiper.square-dot .a-swiper-dot.a-swiper-dot-active,
 swiper.square-dot .uni-swiper-dot.uni-swiper-dot-active {
   opacity: 1;
-  width: 30upx;
+  width: 30*0.5px;
 }
 
 swiper.round-dot .wx-swiper-dot,
 swiper.round-dot .a-swiper-dot,
 swiper.round-dot .uni-swiper-dot {
-  width: 10upx;
-  height: 10upx;
+  width: 10*0.5px;
+  height: 10*0.5px;
   position: relative;
-  margin: 4upx 8upx !important;
+  margin: 4*0.5px 8*0.5px !important;
 }
 
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active::after,
@@ -2188,26 +2188,26 @@ swiper.round-dot .a-swiper-dot.a-swiper-dot-active::after,
 swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active::after {
   content: "";
   position: absolute;
-  width: 10upx;
-  height: 10upx;
-  top: 0upx;
-  left: 0upx;
+  width: 10*0.5px;
+  height: 10*0.5px;
+  top: 0*0.5px;
+  left: 0*0.5px;
   right: 0;
   bottom: 0;
   margin: auto;
   background-color: #ffffff;
-  border-radius: 20upx;
+  border-radius: 20*0.5px;
 }
 
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active,
 swiper.round-dot .a-swiper-dot.a-swiper-dot-active,
 swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
-  width: 18upx;
-  height: 18upx;
+  width: 18*0.5px;
+  height: 18*0.5px;
 }
 
 .screen-swiper {
-  min-height: 375upx;
+  min-height: 375*0.5px;
 }
 
 .screen-swiper img,
@@ -2222,14 +2222,14 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 }
 
 .card-swiper {
-  height: 420upx !important;
+  height: 420*0.5px !important;
 }
 
 .card-swiper swiper-item {
-  width: 610upx !important;
-  left: 70upx;
+  width: 610*0.5px !important;
+  left: 70*0.5px;
   box-sizing: border-box;
-  padding: 40upx 0upx 70upx;
+  padding: 40*0.5px 0*0.5px 70*0.5px;
   overflow: initial;
 }
 
@@ -2237,7 +2237,7 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
   width: 100%;
   display: block;
   height: 100%;
-  border-radius: 10upx;
+  border-radius: 10*0.5px;
   transform: scale(0.9);
   transition: all 0.2s ease-in 0s;
   overflow: hidden;
@@ -2250,16 +2250,16 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 
 
 .tower-swiper {
-  height: 420upx;
+  height: 420*0.5px;
   position: relative;
-  max-width: 750upx;
+  max-width: 750*0.5px;
   overflow: hidden;
 }
 
 .tower-swiper .tower-item {
   position: absolute;
-  width: 300upx;
-  height: 380upx;
+  width: 300*0.5px;
+  height: 380*0.5px;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -2275,7 +2275,7 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 .tower-swiper .tower-item .swiper-item {
   width: 100%;
   height: 100%;
-  border-radius: 6upx;
+  border-radius: 6*0.5px;
   overflow: hidden;
 }
 
@@ -2300,7 +2300,7 @@ scroll-view.cu-steps .cu-item {
   flex: 1;
   text-align: center;
   position: relative;
-  min-width: 100upx;
+  min-width: 100*0.5px;
 }
 
 .cu-steps .cu-item:not([class*="text-"]) {
@@ -2310,8 +2310,8 @@ scroll-view.cu-steps .cu-item {
 .cu-steps .cu-item [class*="cuIcon-"],
 .cu-steps .cu-item .num {
   display: block;
-  font-size: 40upx;
-  line-height: 80upx;
+  font-size: 40*0.5px;
+  line-height: 80*0.5px;
 }
 
 .cu-steps .cu-item::before,
@@ -2322,10 +2322,10 @@ scroll-view.cu-steps .cu-item {
   display: block;
   position: absolute;
   height: 0px;
-  width: calc(100% - 80upx);
+  width: calc(100% - 80*0.5px);
   border-bottom: 1px solid #ccc;
-  left: calc(0px - (100% - 80upx) / 2);
-  top: 40upx;
+  left: calc(0px - (100% - 80*0.5px) / 2);
+  top: 40*0.5px;
   z-index: 0;
 }
 
@@ -2333,9 +2333,9 @@ scroll-view.cu-steps .cu-item {
 .cu-steps.steps-arrow .cu-item::after {
   content: "\e6a3";
   font-family: 'cuIcon';
-  height: 30upx;
+  height: 30*0.5px;
   border-bottom-width: 0px;
-  line-height: 30upx;
+  line-height: 30*0.5px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -2344,7 +2344,7 @@ scroll-view.cu-steps .cu-item {
 
 .cu-steps.steps-bottom .cu-item::before,
 .cu-steps.steps-bottom .cu-item::after {
-  bottom: 40upx;
+  bottom: 40*0.5px;
   top: initial;
 }
 
@@ -2355,7 +2355,7 @@ scroll-view.cu-steps .cu-item {
 }
 
 .cu-steps .cu-item[class*="text-"]::after {
-  width: calc(100% - 80upx);
+  width: calc(100% - 80*0.5px);
   color: currentColor;
 }
 
@@ -2365,12 +2365,12 @@ scroll-view.cu-steps .cu-item {
 }
 
 .cu-steps .cu-item .num {
-  width: 40upx;
-  height: 40upx;
+  width: 40*0.5px;
+  height: 40*0.5px;
   border-radius: 50%;
-  line-height: 40upx;
-  margin: 20upx auto;
-  font-size: 24upx;
+  line-height: 40*0.5px;
+  margin: 20*0.5px auto;
+  font-size: 24*0.5px;
   border: 1px solid currentColor;
   position: relative;
   overflow: hidden;
@@ -2390,16 +2390,16 @@ scroll-view.cu-steps .cu-item {
   bottom: 0;
   margin: auto;
   transition: all 0.3s ease-in-out 0s;
-  transform: translateY(0upx);
+  transform: translateY(0*0.5px);
 }
 
 .cu-steps .cu-item[class*="text-"] .num::before {
-  transform: translateY(-40upx);
+  transform: translateY(-40*0.5px);
   color: #ffffff;
 }
 
 .cu-steps .cu-item .num::after {
-  transform: translateY(40upx);
+  transform: translateY(40*0.5px);
   color: #ffffff;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -2408,7 +2408,7 @@ scroll-view.cu-steps .cu-item {
   content: "\e645";
   font-family: 'cuIcon';
   color: #ffffff;
-  transform: translateY(0upx);
+  transform: translateY(0*0.5px);
 }
 
 .cu-steps .cu-item[class*="text-"] .num.err::after {
@@ -2536,14 +2536,14 @@ scroll-view.cu-steps .cu-item {
   position: absolute;
   right: 0;
   top: 0;
-  border-bottom-left-radius: 6upx;
-  padding: 6upx 12upx;
+  border-bottom-left-radius: 6*0.5px;
+  padding: 6*0.5px 12*0.5px;
   height: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .grid.grid-square > view > text[class*="cuIcon-"] {
-  font-size: 52upx;
+  font-size: 52*0.5px;
   position: absolute;
   color: #8799a3;
   margin: auto;
@@ -2558,9 +2558,9 @@ scroll-view.cu-steps .cu-item {
 }
 
 .grid.grid-square > view {
-  margin-right: 20upx;
-  margin-bottom: 20upx;
-  border-radius: 6upx;
+  margin-right: 20*0.5px;
+  margin-bottom: 20*0.5px;
+  border-radius: 6*0.5px;
   position: relative;
   overflow: hidden;
 }
@@ -2578,27 +2578,27 @@ scroll-view.cu-steps .cu-item {
 }
 
 .grid.col-2.grid-square > view {
-  padding-bottom: calc((100% - 20upx) / 2);
+  padding-bottom: calc((100% - 20*0.5px) / 2);
   height: 0;
-  width: calc((100% - 20upx) / 2);
+  width: calc((100% - 20*0.5px) / 2);
 }
 
 .grid.col-3.grid-square > view {
-  padding-bottom: calc((100% - 40upx) / 3);
+  padding-bottom: calc((100% - 40*0.5px) / 3);
   height: 0;
-  width: calc((100% - 40upx) / 3);
+  width: calc((100% - 40*0.5px) / 3);
 }
 
 .grid.col-4.grid-square > view {
-  padding-bottom: calc((100% - 60upx) / 4);
+  padding-bottom: calc((100% - 60*0.5px) / 4);
   height: 0;
-  width: calc((100% - 60upx) / 4);
+  width: calc((100% - 60*0.5px) / 4);
 }
 
 .grid.col-5.grid-square > view {
-  padding-bottom: calc((100% - 80upx) / 5);
+  padding-bottom: calc((100% - 80*0.5px) / 5);
   height: 0;
-  width: calc((100% - 80upx) / 5);
+  width: calc((100% - 80*0.5px) / 5);
 }
 
 .grid.col-2.grid-square > view:nth-child(2n),
@@ -2635,153 +2635,153 @@ scroll-view.cu-steps .cu-item {
 }
 
 .margin-xs {
-  margin: 10upx;
+  margin: 10*0.5px;
 }
 
 .margin-sm {
-  margin: 20upx;
+  margin: 20*0.5px;
 }
 
 .margin {
-  margin: 30upx;
+  margin: 30*0.5px;
 }
 
 .margin-lg {
-  margin: 40upx;
+  margin: 40*0.5px;
 }
 
 .margin-xl {
-  margin: 50upx;
+  margin: 50*0.5px;
 }
 
 .margin-top-xs {
-  margin-top: 10upx;
+  margin-top: 10*0.5px;
 }
 
 .margin-top-sm {
-  margin-top: 20upx;
+  margin-top: 20*0.5px;
 }
 
 .margin-top {
-  margin-top: 30upx;
+  margin-top: 30*0.5px;
 }
 
 .margin-top-lg {
-  margin-top: 40upx;
+  margin-top: 40*0.5px;
 }
 
 .margin-top-xl {
-  margin-top: 50upx;
+  margin-top: 50*0.5px;
 }
 
 .margin-right-xs {
-  margin-right: 10upx;
+  margin-right: 10*0.5px;
 }
 
 .margin-right-sm {
-  margin-right: 20upx;
+  margin-right: 20*0.5px;
 }
 
 .margin-right {
-  margin-right: 30upx;
+  margin-right: 30*0.5px;
 }
 
 .margin-right-lg {
-  margin-right: 40upx;
+  margin-right: 40*0.5px;
 }
 
 .margin-right-xl {
-  margin-right: 50upx;
+  margin-right: 50*0.5px;
 }
 
 .margin-bottom-xs {
-  margin-bottom: 10upx;
+  margin-bottom: 10*0.5px;
 }
 
 .margin-bottom-sm {
-  margin-bottom: 20upx;
+  margin-bottom: 20*0.5px;
 }
 
 .margin-bottom {
-  margin-bottom: 30upx;
+  margin-bottom: 30*0.5px;
 }
 
 .margin-bottom-lg {
-  margin-bottom: 40upx;
+  margin-bottom: 40*0.5px;
 }
 
 .margin-bottom-xl {
-  margin-bottom: 50upx;
+  margin-bottom: 50*0.5px;
 }
 
 .margin-left-xs {
-  margin-left: 10upx;
+  margin-left: 10*0.5px;
 }
 
 .margin-left-sm {
-  margin-left: 20upx;
+  margin-left: 20*0.5px;
 }
 
 .margin-left {
-  margin-left: 30upx;
+  margin-left: 30*0.5px;
 }
 
 .margin-left-lg {
-  margin-left: 40upx;
+  margin-left: 40*0.5px;
 }
 
 .margin-left-xl {
-  margin-left: 50upx;
+  margin-left: 50*0.5px;
 }
 
 .margin-lr-xs {
-  margin-left: 10upx;
-  margin-right: 10upx;
+  margin-left: 10*0.5px;
+  margin-right: 10*0.5px;
 }
 
 .margin-lr-sm {
-  margin-left: 20upx;
-  margin-right: 20upx;
+  margin-left: 20*0.5px;
+  margin-right: 20*0.5px;
 }
 
 .margin-lr {
-  margin-left: 30upx;
-  margin-right: 30upx;
+  margin-left: 30*0.5px;
+  margin-right: 30*0.5px;
 }
 
 .margin-lr-lg {
-  margin-left: 40upx;
-  margin-right: 40upx;
+  margin-left: 40*0.5px;
+  margin-right: 40*0.5px;
 }
 
 .margin-lr-xl {
-  margin-left: 50upx;
-  margin-right: 50upx;
+  margin-left: 50*0.5px;
+  margin-right: 50*0.5px;
 }
 
 .margin-tb-xs {
-  margin-top: 10upx;
-  margin-bottom: 10upx;
+  margin-top: 10*0.5px;
+  margin-bottom: 10*0.5px;
 }
 
 .margin-tb-sm {
-  margin-top: 20upx;
-  margin-bottom: 20upx;
+  margin-top: 20*0.5px;
+  margin-bottom: 20*0.5px;
 }
 
 .margin-tb {
-  margin-top: 30upx;
-  margin-bottom: 30upx;
+  margin-top: 30*0.5px;
+  margin-bottom: 30*0.5px;
 }
 
 .margin-tb-lg {
-  margin-top: 40upx;
-  margin-bottom: 40upx;
+  margin-top: 40*0.5px;
+  margin-bottom: 40*0.5px;
 }
 
 .margin-tb-xl {
-  margin-top: 50upx;
-  margin-bottom: 50upx;
+  margin-top: 50*0.5px;
+  margin-bottom: 50*0.5px;
 }
 
 .padding-0 {
@@ -2789,153 +2789,153 @@ scroll-view.cu-steps .cu-item {
 }
 
 .padding-xs {
-  padding: 10upx;
+  padding: 10*0.5px;
 }
 
 .padding-sm {
-  padding: 20upx;
+  padding: 20*0.5px;
 }
 
 .padding {
-  padding: 30upx;
+  padding: 30*0.5px;
 }
 
 .padding-lg {
-  padding: 40upx;
+  padding: 40*0.5px;
 }
 
 .padding-xl {
-  padding: 50upx;
+  padding: 50*0.5px;
 }
 
 .padding-top-xs {
-  padding-top: 10upx;
+  padding-top: 10*0.5px;
 }
 
 .padding-top-sm {
-  padding-top: 20upx;
+  padding-top: 20*0.5px;
 }
 
 .padding-top {
-  padding-top: 30upx;
+  padding-top: 30*0.5px;
 }
 
 .padding-top-lg {
-  padding-top: 40upx;
+  padding-top: 40*0.5px;
 }
 
 .padding-top-xl {
-  padding-top: 50upx;
+  padding-top: 50*0.5px;
 }
 
 .padding-right-xs {
-  padding-right: 10upx;
+  padding-right: 10*0.5px;
 }
 
 .padding-right-sm {
-  padding-right: 20upx;
+  padding-right: 20*0.5px;
 }
 
 .padding-right {
-  padding-right: 30upx;
+  padding-right: 30*0.5px;
 }
 
 .padding-right-lg {
-  padding-right: 40upx;
+  padding-right: 40*0.5px;
 }
 
 .padding-right-xl {
-  padding-right: 50upx;
+  padding-right: 50*0.5px;
 }
 
 .padding-bottom-xs {
-  padding-bottom: 10upx;
+  padding-bottom: 10*0.5px;
 }
 
 .padding-bottom-sm {
-  padding-bottom: 20upx;
+  padding-bottom: 20*0.5px;
 }
 
 .padding-bottom {
-  padding-bottom: 30upx;
+  padding-bottom: 30*0.5px;
 }
 
 .padding-bottom-lg {
-  padding-bottom: 40upx;
+  padding-bottom: 40*0.5px;
 }
 
 .padding-bottom-xl {
-  padding-bottom: 50upx;
+  padding-bottom: 50*0.5px;
 }
 
 .padding-left-xs {
-  padding-left: 10upx;
+  padding-left: 10*0.5px;
 }
 
 .padding-left-sm {
-  padding-left: 20upx;
+  padding-left: 20*0.5px;
 }
 
 .padding-left {
-  padding-left: 30upx;
+  padding-left: 30*0.5px;
 }
 
 .padding-left-lg {
-  padding-left: 40upx;
+  padding-left: 40*0.5px;
 }
 
 .padding-left-xl {
-  padding-left: 50upx;
+  padding-left: 50*0.5px;
 }
 
 .padding-lr-xs {
-  padding-left: 10upx;
-  padding-right: 10upx;
+  padding-left: 10*0.5px;
+  padding-right: 10*0.5px;
 }
 
 .padding-lr-sm {
-  padding-left: 20upx;
-  padding-right: 20upx;
+  padding-left: 20*0.5px;
+  padding-right: 20*0.5px;
 }
 
 .padding-lr {
-  padding-left: 30upx;
-  padding-right: 30upx;
+  padding-left: 30*0.5px;
+  padding-right: 30*0.5px;
 }
 
 .padding-lr-lg {
-  padding-left: 40upx;
-  padding-right: 40upx;
+  padding-left: 40*0.5px;
+  padding-right: 40*0.5px;
 }
 
 .padding-lr-xl {
-  padding-left: 50upx;
-  padding-right: 50upx;
+  padding-left: 50*0.5px;
+  padding-right: 50*0.5px;
 }
 
 .padding-tb-xs {
-  padding-top: 10upx;
-  padding-bottom: 10upx;
+  padding-top: 10*0.5px;
+  padding-bottom: 10*0.5px;
 }
 
 .padding-tb-sm {
-  padding-top: 20upx;
-  padding-bottom: 20upx;
+  padding-top: 20*0.5px;
+  padding-bottom: 20*0.5px;
 }
 
 .padding-tb {
-  padding-top: 30upx;
-  padding-bottom: 30upx;
+  padding-top: 30*0.5px;
+  padding-bottom: 30*0.5px;
 }
 
 .padding-tb-lg {
-  padding-top: 40upx;
-  padding-bottom: 40upx;
+  padding-top: 40*0.5px;
+  padding-bottom: 40*0.5px;
 }
 
 .padding-tb-xl {
-  padding-top: 50upx;
-  padding-bottom: 50upx;
+  padding-top: 50*0.5px;
+  padding-bottom: 50*0.5px;
 }
 
 /* -- 浮动 --  */
@@ -3213,119 +3213,119 @@ scroll-view.cu-steps .cu-item {
 }
 
 .shadow[class*="-red"] {
-  box-shadow: 6upx 6upx 8upx rgba(204, 69, 59, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(204, 69, 59, 0.2);
 }
 
 .shadow[class*="-orange"] {
-  box-shadow: 6upx 6upx 8upx rgba(217, 109, 26, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(217, 109, 26, 0.2);
 }
 
 .shadow[class*="-yellow"] {
-  box-shadow: 6upx 6upx 8upx rgba(224, 170, 7, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(224, 170, 7, 0.2);
 }
 
 .shadow[class*="-olive"] {
-  box-shadow: 6upx 6upx 8upx rgba(124, 173, 55, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(124, 173, 55, 0.2);
 }
 
 .shadow[class*="-green"] {
-  box-shadow: 6upx 6upx 8upx rgba(48, 156, 63, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(48, 156, 63, 0.2);
 }
 
 .shadow[class*="-cyan"] {
-  box-shadow: 6upx 6upx 8upx rgba(28, 187, 180, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(28, 187, 180, 0.2);
 }
 
 .shadow[class*="-blue"] {
-  box-shadow: 6upx 6upx 8upx rgba(0, 102, 204, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(0, 102, 204, 0.2);
 }
 
 .shadow[class*="-purple"] {
-  box-shadow: 6upx 6upx 8upx rgba(88, 48, 156, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(88, 48, 156, 0.2);
 }
 
 .shadow[class*="-mauve"] {
-  box-shadow: 6upx 6upx 8upx rgba(133, 33, 150, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(133, 33, 150, 0.2);
 }
 
 .shadow[class*="-pink"] {
-  box-shadow: 6upx 6upx 8upx rgba(199, 50, 134, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(199, 50, 134, 0.2);
 }
 
 .shadow[class*="-brown"] {
-  box-shadow: 6upx 6upx 8upx rgba(140, 88, 53, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(140, 88, 53, 0.2);
 }
 
 .shadow[class*="-grey"] {
-  box-shadow: 6upx 6upx 8upx rgba(114, 130, 138, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(114, 130, 138, 0.2);
 }
 
 .shadow[class*="-gray"] {
-  box-shadow: 6upx 6upx 8upx rgba(114, 130, 138, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(114, 130, 138, 0.2);
 }
 
 .shadow[class*="-black"] {
-  box-shadow: 6upx 6upx 8upx rgba(26, 26, 26, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(26, 26, 26, 0.2);
 }
 
 .shadow[class*="-white"] {
-  box-shadow: 6upx 6upx 8upx rgba(26, 26, 26, 0.2);
+  box-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(26, 26, 26, 0.2);
 }
 
 .text-shadow[class*="-red"] {
-  text-shadow: 6upx 6upx 8upx rgba(204, 69, 59, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(204, 69, 59, 0.2);
 }
 
 .text-shadow[class*="-orange"] {
-  text-shadow: 6upx 6upx 8upx rgba(217, 109, 26, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(217, 109, 26, 0.2);
 }
 
 .text-shadow[class*="-yellow"] {
-  text-shadow: 6upx 6upx 8upx rgba(224, 170, 7, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(224, 170, 7, 0.2);
 }
 
 .text-shadow[class*="-olive"] {
-  text-shadow: 6upx 6upx 8upx rgba(124, 173, 55, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(124, 173, 55, 0.2);
 }
 
 .text-shadow[class*="-green"] {
-  text-shadow: 6upx 6upx 8upx rgba(48, 156, 63, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(48, 156, 63, 0.2);
 }
 
 .text-shadow[class*="-cyan"] {
-  text-shadow: 6upx 6upx 8upx rgba(28, 187, 180, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(28, 187, 180, 0.2);
 }
 
 .text-shadow[class*="-blue"] {
-  text-shadow: 6upx 6upx 8upx rgba(0, 102, 204, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(0, 102, 204, 0.2);
 }
 
 .text-shadow[class*="-purple"] {
-  text-shadow: 6upx 6upx 8upx rgba(88, 48, 156, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(88, 48, 156, 0.2);
 }
 
 .text-shadow[class*="-mauve"] {
-  text-shadow: 6upx 6upx 8upx rgba(133, 33, 150, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(133, 33, 150, 0.2);
 }
 
 .text-shadow[class*="-pink"] {
-  text-shadow: 6upx 6upx 8upx rgba(199, 50, 134, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(199, 50, 134, 0.2);
 }
 
 .text-shadow[class*="-brown"] {
-  text-shadow: 6upx 6upx 8upx rgba(140, 88, 53, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(140, 88, 53, 0.2);
 }
 
 .text-shadow[class*="-grey"] {
-  text-shadow: 6upx 6upx 8upx rgba(114, 130, 138, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(114, 130, 138, 0.2);
 }
 
 .text-shadow[class*="-gray"] {
-  text-shadow: 6upx 6upx 8upx rgba(114, 130, 138, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(114, 130, 138, 0.2);
 }
 
 .text-shadow[class*="-black"] {
-  text-shadow: 6upx 6upx 8upx rgba(26, 26, 26, 0.2);
+  text-shadow: 6*0.5px 6*0.5px 8*0.5px rgba(26, 26, 26, 0.2);
 }
 
 .bg-img {
@@ -3380,35 +3380,35 @@ scroll-view.cu-steps .cu-item {
  ==================== */
 
 .text-xs {
-  font-size: 20upx;
+  font-size: 20*0.5px;
 }
 
 .text-sm {
-  font-size: 24upx;
+  font-size: 24*0.5px;
 }
 
 .text-df {
-  font-size: 28upx;
+  font-size: 28*0.5px;
 }
 
 .text-lg {
-  font-size: 32upx;
+  font-size: 32*0.5px;
 }
 
 .text-xl {
-  font-size: 36upx;
+  font-size: 36*0.5px;
 }
 
 .text-xxl {
-  font-size: 44upx;
+  font-size: 44*0.5px;
 }
 
 .text-sl {
-  font-size: 80upx;
+  font-size: 80*0.5px;
 }
 
 .text-xsl {
-  font-size: 120upx;
+  font-size: 120*0.5px;
 }
 
 .text-Abc {
@@ -3426,7 +3426,7 @@ scroll-view.cu-steps .cu-item {
 .text-price::before {
   content: "¥";
   font-size: 80%;
-  margin-right: 4upx;
+  margin-right: 4*0.5px;
 }
 
 .text-cut {

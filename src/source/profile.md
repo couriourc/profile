@@ -2,13 +2,16 @@
 theme: '施工中的简历制作器'
 ---
 
-## 个人信息
+:::::main{.layout}
 
-姓名: 陈润
 
-手机号: 18982671694
+## :div[个人信息] 
 
-Github: https://github.com/couriourc
+:::section{.personal-info}
+:li[:strong[姓名]{.cu-tag.radius} :strong[陈润]]{.title}
+:li[:strong[电话]{.cu-tag.radius} :strong[18982671694]]{.title}
+:li[:strong[GitHub]{.cu-tag.radius} :strong[https://github.com/couriourc]]
+:::
 
 ## 专业技能
 
@@ -27,7 +30,9 @@ Github: https://github.com/couriourc
 
 - 配送宝骑手端:独立负责微信小程序端开发；实现实时通过不同的职位调控改变页面展示,并对其进行性能优化；将 FCP
   从秒级优化至毫秒级；对地理围栏进行研究,并提供相应的解决方案；
-- 项目架构:从整体到细节与团队一起参与项目架构,从开发到测试,建立业务关系,探讨开发实现难点,以及服务器部署细节,实现后端微服务(内服务与外服务)架构；
+- 项目架构:
+  从整体到细节与团队一起参与项目架构,从开发到测试,建立业务关系,探讨开发实现难点,以及服务器部署细节,实现后端微服务(
+  内服务与外服务)架构；
 - 功能模块测试:采用 Python+Faker+Grequests实现对服务器以及对接口进行订单数据 Mock 和高并发压力测试；
 
 ### 成都触及科技有限公司
@@ -56,3 +61,4 @@ Github: https://github.com/couriourc
 - 第十三届蓝桥杯全国软件类Web应用开发大学组 - 决赛三等奖
 - 第三届全国高校计算机能力挑战赛决赛 Python程序设计赛 -决赛三等奖
 
+:::::
