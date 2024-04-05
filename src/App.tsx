@@ -27,12 +27,13 @@ import { visit } from 'unist-util-visit';
 import { Node } from 'hast';
 import './markdown-preview/theme-default.less';
 import { PanZoom } from 'react-easy-panzoom';
+import { useMedia } from 'react-use';
 
 function App() {
   const [markdown, asyncMarkdown] = useState(Profile);
 
   const cached = new Map();
-
+  const isWide = useMedia('(min-width: 480px)');
 
   useEffect(() => {
     setTimeout(() => {
@@ -101,8 +102,9 @@ function App() {
         />
         <PanZoom
           boundaryRatioVertical={0.8}
-          enableBoundingBox
+          enableBoundingBox={false}
           autoCenter
+          disabled={!isWide}
           className={cx('z-1 overflow-x-hidden')}
         >
           <Markdown
