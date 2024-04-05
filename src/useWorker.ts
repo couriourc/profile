@@ -1,4 +1,4 @@
-import * as monaco from 'monaco-editor';
+import './mono-editor/suggestion.ts';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 window.MonacoEnvironment = {
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -47,19 +47,3 @@ window.MonacoEnvironment = {
     }
   },
 };
-monaco.languages.registerCompletionItemProvider('markdown', {
-  provideCompletionItems() {
-    return {
-      suggestions: [
-        {
-          label: '显示的提示名称',
-          kind: monaco.languages.CompletionItemKind['Function'], //这里Function也可以是别的值，主要用来显示不同的图标
-          insertText: '选择后粘贴到编辑器中的文字', // 我试了一下，如果没有此项，则无法插入
-          detail: '任何文字提示',
-        },
-      ],
-    };
-  },
-  triggerCharacters: [':'],  // 写触发提示的字符，可以有多个
-});
-

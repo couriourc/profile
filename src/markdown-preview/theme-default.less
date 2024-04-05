@@ -1,0 +1,83 @@
+
+.resume-theme-default {
+  h2, p, ul, h3 {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    list-style: none;
+  }
+
+  h2:nth-child(1) {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+
+  ul {
+    padding-left: 2px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    & ~ section {
+    }
+  }
+
+  section {
+    font-size: 14px;
+    margin: 4px 0;
+
+  }
+
+  &.layout {
+    background: #FFF;
+    padding: 6px 12px 6px 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin: 6px 6px 0 6px;
+    min-height: 100%;
+
+    .title {
+      font-size: 20px;
+      display: inline-block;
+      padding: 0 4px;
+      position: relative;
+      background: #F6F6F6;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border-radius: 6px;
+        background: #8799a3;
+        height: 80%;
+        width: 4px;
+        left: -2px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+    }
+
+    .info {
+      p {
+        display: flex;
+        gap: 12px;
+
+        li {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+}
+
+

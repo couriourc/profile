@@ -20,6 +20,7 @@
     "file-saver": "^2.0.5",
     "hast": "^1.0.0",
     "hast-util-to-jsx-runtime": "^2.3.0",
+    "js-yaml": "^4.1.0",
     "less": "^4.2.0",
     "monaco-editor": "^0.44.0",
     "normalize.css": "^8.0.1",
@@ -28,7 +29,9 @@
     "react-markdown": "^9.0.1",
     "react-monaco-editor": "^0.55.0",
     "react-syntax-highlighter": "^15.5.0",
+    "react-use": "^17.5.0",
     "rehype-highlight": "^7.0.0",
+    "rehype-wrap-all": "^1.1.0",
     "remark-containers": "^1.2.0",
     "remark-definition-list": "^2.0.0",
     "remark-directive": "^3.0.0",
@@ -43,8 +46,11 @@
     "remark-pdf": "^0.0.13",
     "remark-rehype": "^11.1.0",
     "unified": "^11.0.4",
+    "unist-util-map": "^4.0.0",
     "unist-util-visit": "^5.0.0",
-    "vfile": "^6.0.1"
+    "vfile": "^6.0.1",
+    "vite-plugin-html": "^3.2.2",
+    "yaml": "^2.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
