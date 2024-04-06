@@ -139,7 +139,7 @@ function App() {
           enableBoundingBox={false}
           autoCenter
           disabled={!isWide}
-          className={cx('z-1 overflow-x-hidden')}
+          className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto')}
           ref={preview}
         >
           <Markdown
@@ -192,7 +192,7 @@ function App() {
             rehypePlugins={[]}
 
             className={cx(
-              `w-full max-h-[calc(100vh-40px)] overflow-y-auto overflow-x-hidden preview-container
+              `w-full  preview-container
             lt-sm:h-fit
             `,
             )}
