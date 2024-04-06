@@ -1,0 +1,25 @@
+.normalize-markdown {
+  p {
+    font-size: 90%;
+  }
+
+  //@each tag in [1,2,3,4,5]
+  each(range(4), {
+    h@{value} {
+      font-size: @value/4 *18px;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+    }
+  })
+
+  p {
+    padding: 0;
+  }
+
+  ul {
+    padding-left: 12px;
+    list-style: none;
+  }
+}

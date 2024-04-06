@@ -12,7 +12,7 @@ import remarkParserYaml from './markdown-preview/yaml-parser';
 import Avatar from './assets/acatar.png';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import MonacoEditor from 'react-monaco-editor';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { css, cx } from '@emotion/css';
 import Profile from './source/profile.md?raw';
 import remarkRehype from 'remark-rehype';
@@ -28,6 +28,9 @@ import { Node } from 'hast';
 import './markdown-preview/theme-default.less';
 import { PanZoom } from 'react-easy-panzoom';
 import { useMedia } from 'react-use';
+import { useDialog } from './hooks/useDialog.tsx';
+import README from '../README.md?raw';
+import html2pdf from 'html-to-pdf-js';
 
 function App() {
   const [markdown, asyncMarkdown] = useState(Profile);
@@ -38,15 +41,40 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       document.title = cached.get('title') ?? '陈润的简历❤️';
-      console.log(cached);
     }, 10);
     return () => {
       cached.clear();
     };
   });
+  const [Dialog, visible, handlers] = useDialog();
+
+  const preview = useRef<HTMLElement>();
+
+  function save() {
+    html2pdf(preview.current?.container?.current?.querySelector(".preview-container"))
+  }
 
   return (
     <>
+      <Dialog visible={visible}>
+        <div className={cx(`
+        w-50% lt-sm:w-300px max-w-800px h-400px
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        bg-#FFF drop-shadow-lg rounded-sm animation-fade 
+         pl-12px box-border 
+        `)}>
+          <div className={cx('w-full h-32px bg-#FFF')}>
+            <i className={cx('cuIcon-close cu-btn float-right cursor-pointer')} onClick={() => {
+              handlers.close();
+            }}></i>
+          </div>
+          <div className={cx(`text-sm text-black drop-shadow-lg`)}>
+            <Markdown className={cx('normalize-markdown')}>
+              {README}
+            </Markdown>
+          </div>
+        </div>
+      </Dialog>
       <header className={cx(`box-shadow-lg 
         h-40px px-12px py-6px
         flex items-center justify-between box-border gap-12px 
@@ -64,7 +92,13 @@ function App() {
           <a className={cx('drop-shadow cursor-pointer underline-transparent text-#000')} target={'_blank'}
              href={`https://couriourc.github.io`}>这人在天冷的时候会穿上秋裤！</a>
         </div>
-        <div><i title={'查看信息'} className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info ')}></i></div>
+        <div className={cx('flex gap-12px')}>
+          <i onClick={() => handlers.open()} title={'查看信息'}
+             className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info ')}></i>
+          <i className={cx('cuIcon-punch cu-btn rounded-lg cursor-pointer')} onClick={() => {
+            save();
+          }}></i>
+        </div>
       </header>
       <main className={
         cx(`
@@ -106,6 +140,7 @@ function App() {
           autoCenter
           disabled={!isWide}
           className={cx('z-1 overflow-x-hidden')}
+          ref={preview}
         >
           <Markdown
             remarkPlugins={[
@@ -157,10 +192,11 @@ function App() {
             rehypePlugins={[]}
 
             className={cx(
-              `w-full max-h-[calc(100vh-40px)] overflow-y-auto overflow-x-hidden 
+              `w-full max-h-[calc(100vh-40px)] overflow-y-auto overflow-x-hidden preview-container
             lt-sm:h-fit
             `,
             )}
+
             components={{
               code(props) {
                 const { children, className, node, ...rest } = props;
