@@ -18,6 +18,11 @@
 
   ul {
     padding-left: 2px;
+
+    li {
+      display: inline-block;
+      list-style: none;
+    }
   }
 
   h3 {
@@ -67,13 +72,13 @@
     }
 
     .info {
+      white-space: nowrap;
+
       p {
         display: flex;
         gap: 12px;
+        flex-wrap: wrap;
 
-        li {
-          display: inline-block;
-        }
       }
     }
 

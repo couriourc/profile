@@ -12,7 +12,7 @@ import remarkParserYaml from './markdown-preview/yaml-parser';
 import Avatar from './assets/acatar.png';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import MonacoEditor from 'react-monaco-editor';
-import { useEffect, useRef, useState } from 'react';
+import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { css, cx } from '@emotion/css';
 import Profile from './source/profile.md?raw';
 import remarkRehype from 'remark-rehype';
@@ -26,12 +26,19 @@ import remarkDirective from 'remark-directive';
 import { visit } from 'unist-util-visit';
 import { Node } from 'hast';
 import './markdown-preview/theme-default.less';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
 import { PanZoom } from 'react-easy-panzoom';
 import { useMedia } from 'react-use';
 import { useDialog } from './hooks/useDialog.tsx';
 import README from '../README.md?raw';
-import html2pdf from 'html-to-pdf-js';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
+import html2pdf from 'html-to-pdf-js';
+import { motion } from 'framer-motion';
+
+//@ts-ignore
 function App() {
   const [markdown, asyncMarkdown] = useState(Profile);
 
@@ -51,13 +58,18 @@ function App() {
   const preview = useRef<HTMLElement>();
 
   function save() {
-
-    html2pdf(preview.current?.container?.current?.querySelector('.preview-container'), {
+    const preview_dom = ((preview.current as unknown as {
+      container: MutableRefObject<HTMLElement>
+    })?.container || preview)?.current?.querySelector('.preview-container');
+    if (!preview_dom) {
+      return console.warn('error found dom');
+    }
+    return html2pdf(preview_dom, {
       filename: (cached.get('title') ?? '简历') + '.pdf',
-
     });
   }
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
   return (
     <>
       <Dialog visible={visible}>
@@ -98,7 +110,7 @@ function App() {
         </div>
         <div className={cx('flex gap-12px')}>
           <i onClick={() => handlers.open()} title={'查看信息'}
-             className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info ')}></i>
+             className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info lt-sm:hidden ')}></i>
           <i className={cx('cuIcon-punch cu-btn rounded-lg cursor-pointer')} onClick={() => {
             save();
           }}></i>
@@ -132,98 +144,105 @@ function App() {
           w-full
           h-full
           className={cx(`
-            lt-sm:min-h-100vh z-max
+            lt-sm:min-h-100vh z-max lt-sm:min-w-100%
           `)}
           onChange={(markdown: string) => {
             asyncMarkdown(markdown);
           }}
         />
-        <PanZoom
-          boundaryRatioVertical={0.8}
-          enableBoundingBox={false}
-          autoCenter
-          disabled={!isWide}
-          className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto')}
-          ref={preview}
-        >
-          <Markdown
-            remarkPlugins={[
-              remarkParse,
-              remarkParserYaml,
-              remarkFrontmatter,
-              [function() {
-                return (ast) => {
-                  const meta = ast.children
-                    .filter(({ type }: Node) => type === 'yaml' || type === 'toml')
-                    .map((item: Node) => {
-                      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                      // @ts-expect-error
-                      return (item.data as unknown)?.parsedValue as Record<string, unknown>;
-                    }).reduce((pre: Record<string, unknown>, now: Record<string, unknown>) => {
-                      return {
-                        ...pre,
-                        ...(now ?? {}),
+
+
+        {
+          (() => {
+            const Zoom = isWide ? PanZoom : motion.div;
+            return <Zoom
+              boundaryRatioVertical={0.8}
+              enableBoundingBox={false}
+              autoCenter
+              disabled={!isWide}
+              className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto w-100%')}
+              ref={preview}
+            >
+              <Markdown
+                remarkPlugins={[
+                  remarkParse,
+                  remarkParserYaml,
+                  remarkFrontmatter,
+                  [function() {
+                    return (ast) => {
+                      const meta = ast.children
+                        .filter(({ type }: Node) => type === 'yaml' || type === 'toml')
+                        .map((item: Node) => {
+                          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                          // @ts-expect-error
+                          return (item.data as unknown)?.parsedValue as Record<string, unknown>;
+                        }).reduce((pre: Record<string, unknown>, now: Record<string, unknown>) => {
+                          return {
+                            ...pre,
+                            ...(now ?? {}),
+                          };
+                        }, {});
+
+                      Object.entries(meta).forEach(([key, value]) => {
+                        cached.set(key, value);
+                      });
+                    };
+                  }],
+                  remarkGemoji,
+                  [remarkGfm, { singleTilde: false }],
+                  [remarkDirective, {}],
+                  remarkDirectiveRehype,
+                  [remarkRehype, {
+                    handlers: {},
+                  }],
+                  [
+                    () => {
+                      return (tree) => {
+                        visit(tree, (node) => {
+                          if (node.type === 'element') {
+                            node.properties = {
+                              ...node.properties,
+                              className: [...(node.properties.className ?? []), ...([`resume-theme-${cached.get('theme') ?? 'default'}`.replace(/\s*/g, '')])],
+                            };
+                          }
+                        });
                       };
-                    }, {});
+                    },
+                  ],
+                ]}
+                rehypePlugins={[]}
 
-                  Object.entries(meta).forEach(([key, value]) => {
-                    cached.set(key, value);
-                  });
-                };
-              }],
-              remarkGemoji,
-              [remarkGfm, { singleTilde: false }],
-              [remarkDirective, {}],
-              remarkDirectiveRehype,
-              [remarkRehype, {
-                handlers: {},
-              }],
-              [
-                () => {
-                  return (tree) => {
-                    visit(tree, (node) => {
-                      if (node.type === 'element') {
-                        node.properties = {
-                          ...node.properties,
-                          className: [...(node.properties.className ?? []), ...([`resume-theme-${cached.get('theme') ?? 'default'}`.replace(/\s*/g, '')])],
-                        };
-                      }
-                    });
-                  };
-                },
-              ],
-            ]}
-            rehypePlugins={[]}
-
-            className={cx(
-              `w-full  preview-container
-            lt-sm:h-fit
+                className={cx(
+                  `w-full  preview-container
+            lt-sm:h-fit lt-sm:w-100vw w-21cm box-border
             `,
-            )}
+                )}
 
-            components={{
-              code(props) {
-                const { children, className, node, ...rest } = props;
-                const match = /language-(\w+)/.exec(className || '');
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                //@ts-expect-error
-                return match ? <SyntaxHighlighter
-                  {...rest}
-                  PreTag="div"
-                  children={String(children ?? '').replace(/\n$/, '')}
-                  language={match[1]}
-                  style={oneLight}
-                /> : <code {...rest} className={className}>
-                  {children ?? ''}
-                </code>;
-              },
+                components={{
+                  code(props) {
+                    const { children, className, node, ...rest } = props;
+                    const match = /language-(\w+)/.exec(className || '');
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    //@ts-expect-error
+                    return match ? <SyntaxHighlighter
+                      {...rest}
+                      PreTag="div"
+                      children={String(children ?? '').replace(/\n$/, '')}
+                      language={match[1]}
+                      style={oneLight}
+                    /> : <code {...rest} className={className}>
+                      {children ?? ''}
+                    </code>;
+                  },
 
-            }}
+                }}
 
-          >
-            {markdown}
-          </Markdown>
-        </PanZoom>
+              >
+                {markdown}
+              </Markdown>
+            </Zoom>;
+          })()
+        }
       </main>
     </>
   );
