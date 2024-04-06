@@ -51,7 +51,11 @@ function App() {
   const preview = useRef<HTMLElement>();
 
   function save() {
-    html2pdf(preview.current?.container?.current?.querySelector(".preview-container"))
+
+    html2pdf(preview.current?.container?.current?.querySelector('.preview-container'), {
+      filename: (cached.get('title') ?? '简历') + '.pdf',
+
+    });
   }
 
   return (
