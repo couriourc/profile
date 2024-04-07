@@ -69,7 +69,7 @@ function App() {
     });
   }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   return (
     <>
       <Dialog visible={visible}>
@@ -106,11 +106,11 @@ function App() {
         )}>
           <img src={Avatar} alt="avatar" width={32} className={cx('rounded-lg')} />
           <a className={cx('drop-shadow cursor-pointer underline-transparent text-#000')} target={'_blank'}
-             href={`https://couriourc.github.io`}>这人在天冷的时候会穿上秋裤！</a>
+            href={`https://couriourc.github.io`}>这人在天冷的时候会穿上秋裤！</a>
         </div>
         <div className={cx('flex gap-12px')}>
           <i onClick={() => handlers.open()} title={'查看信息'}
-             className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info lt-sm:hidden ')}></i>
+            className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info lt-sm:hidden ')}></i>
           <i className={cx('cuIcon-punch cu-btn rounded-lg cursor-pointer')} onClick={() => {
             save();
           }}></i>
@@ -160,7 +160,7 @@ function App() {
               enableBoundingBox={false}
               autoCenter
               disabled={!isWide}
-              className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto w-100%')}
+              className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto w-100% lt-sm:h-fit')}
               ref={preview}
             >
               <Markdown
@@ -168,7 +168,7 @@ function App() {
                   remarkParse,
                   remarkParserYaml,
                   remarkFrontmatter,
-                  [function() {
+                  [function () {
                     return (ast) => {
                       const meta = ast.children
                         .filter(({ type }: Node) => type === 'yaml' || type === 'toml')
