@@ -8,7 +8,7 @@ title: '陈润的简历'
 ## :span[个人信息]{.title.info}
 
 ::::section{.info.mt-12px}
-:li[:i{.cu-tag.radius.cuIcon-peoplefill} :strong[陈润]]
+:li[:i{.cu-tag.radius.cuIcon-peoplefill} :strong[小润]]
 :li[:i{.cu-tag.radius.cuIcon-dianhua} :strong[18982671694]]
 :li[:i{.cu-tag.radius.cuIcon-github} :strong[https://github.com/couriourc]]
 ::::
