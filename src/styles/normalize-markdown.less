@@ -12,14 +12,45 @@
       margin-right: 0;
       padding: 0;
     }
-  })
+
+  });
+
+p {
+  padding: 0;
+}
+
+ul {
+  padding-left: 12px;
+  list-style: none;
+}
+
+&.dialog {
+
+  @media (max-width: 400px) {
+
+
+    each(range(4), {
+      h@{value} {
+        font-size: 14px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        margin-bottom: 4px;
+
+      }
+    });
+
+  h1 {
+    font-size: 16px;
+  }
 
   p {
     padding: 0;
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-size: 12px;
   }
-
-  ul {
-    padding-left: 12px;
-    list-style: none;
-  }
+}
+}
 }

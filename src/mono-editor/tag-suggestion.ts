@@ -9,7 +9,6 @@ monaco.languages.registerCompletionItemProvider('markdown', {
       endLineNumber: position.lineNumber,
       endColumn: position.column,
     });
-    console.log(model, codePre);
     return {
       suggestions: [],
     };

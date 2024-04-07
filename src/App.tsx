@@ -85,7 +85,7 @@ function App() {
             }}></i>
           </div>
           <div className={cx(`text-sm text-black drop-shadow-lg`)}>
-            <Markdown className={cx('normalize-markdown')}>
+            <Markdown className={cx('normalize-markdown dialog')}>
               {README}
             </Markdown>
           </div>
@@ -93,7 +93,7 @@ function App() {
       </Dialog>
       <header className={cx(`box-shadow-lg 
         h-40px px-12px py-6px
-        flex items-center justify-between box-border gap-12px 
+        flex items-center justify-between box-border gap-12px lt-sm:gap-4px
         `, css`
           backdrop-filter: blur(10);
           background-blend-mode: color;
@@ -105,12 +105,12 @@ function App() {
           `,
         )}>
           <img src={Avatar} alt="avatar" width={32} className={cx('rounded-lg')} />
-          <a className={cx('drop-shadow cursor-pointer underline-transparent text-#000')} target={'_blank'}
+          <a className={cx('drop-shadow cursor-pointer underline-transparent text-#000 lt-sm:text-14px')} target={'_blank'}
             href={`https://couriourc.github.io`}>这人在天冷的时候会穿上秋裤！</a>
         </div>
-        <div className={cx('flex gap-12px')}>
+        <div className={cx('flex gap-12px lt-sm:gap-4px')}>
           <i onClick={() => handlers.open()} title={'查看信息'}
-            className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info lt-sm:hidden ')}></i>
+            className={cx('cu-btn rounded-lg cursor-pointer cuIcon-info ')}></i>
           <i className={cx('cuIcon-punch cu-btn rounded-lg cursor-pointer')} onClick={() => {
             save();
           }}></i>
@@ -160,7 +160,7 @@ function App() {
               enableBoundingBox={false}
               autoCenter
               disabled={!isWide}
-              className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto w-100% lt-sm:h-fit')}
+              className={cx('z-1 overflow-x-hidden max-h-[calc(100vh-40px)] overflow-y-auto w-100% lt-sm:h-fit lt-sm:w-fit')}
               ref={preview}
             >
               <Markdown
