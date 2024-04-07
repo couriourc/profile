@@ -1,6 +1,6 @@
 ---
 theme: 'default'
-title: '陈润的简历'
+title: '润的简历'
 ---
 
 ::::::main{.layout}

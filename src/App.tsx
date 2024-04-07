@@ -47,7 +47,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      document.title = cached.get('title') ?? '陈润的简历❤️';
+      document.title = cached.get('title') ?? '润的简历❤️';
     }, 10);
     return () => {
       cached.clear();
