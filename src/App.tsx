@@ -32,7 +32,6 @@ import {PanZoom} from 'react-easy-panzoom';
 import {useMedia} from 'react-use';
 import {useDialog} from './hooks/useDialog.tsx';
 import README from '../README.md?raw';
-
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-ignore
 import html2pdf from 'html-to-pdf-js';
@@ -109,6 +108,7 @@ function App() {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     return (
         <>
+            {/*//@ts-ignore*/}
             <Dialog visible={visible}>
                 <div className={cx(`
         w-50% lt-sm:w-300px max-w-800px h-400px
@@ -224,7 +224,8 @@ function App() {
                                 }
 
                                 resolve({
-                                    //@ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                    //@ts-expect-error
                                     default:
                                         () =>
                                             <Zoom
@@ -239,7 +240,8 @@ function App() {
                                                     remarkPlugins={[
                                                         remarkParse,
                                                         remarkFrontmatter,
-                                                        //@ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                                        //@ts-expect-error
                                                         module.length ? module : [new Function()],
                                                         remarkGemoji,
                                                         [remarkGfm, {singleTilde: false}],

@@ -6,9 +6,9 @@
 
 ## 功能特性
 
-- [ x ] 基本简历编辑及展示
-- [ x ] 内置 ColorUi Css 样式
-- [ x ] Emjoy 代码提示以及 ColorUi Icon 类名提示
+- [x] 基本简历编辑及展示
+- [x] 内置 ColorUi Css 样式
+- [x] Emjoy 代码提示以及 ColorUi Icon 类名提示
 - [ ] 导出为 PDF
 - [ ] 自定义模板样式，内置不同样式
 - [ ] SEO 优化

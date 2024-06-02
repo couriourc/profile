@@ -49,6 +49,7 @@
     "remark-parse-yaml": "^0.0.3",
     "remark-pdf": "^0.0.13",
     "remark-rehype": "^11.1.0",
+    "underscore": "^1.13.6",
     "unified": "^11.0.4",
     "unist-util-filter": "^5.0.1",
     "unist-util-map": "^4.0.0",
@@ -60,6 +61,7 @@
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/underscore": "^1.11.15",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@unocss/preset-attributify": "0.59.0-beta.1",

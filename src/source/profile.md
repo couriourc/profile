@@ -10,7 +10,7 @@ plugins:
 ## :span[个人信息]{.title.info}
 
 ::::section{.info.mt-12px}
-:li[:i{.cu-tag.radius.cuIcon-peoplefill} :strong[小润]]
+:li[:i{.cu-tag.radius.cuIcon-peoplefill} :strong[陈润]]
 :li[:i{.cu-tag.radius.cuIcon-dianhua} :strong[18982671694]]
 :li[:i{.cu-tag.radius.cuIcon-github} :strong[https://github.com/couriourc]]
 ::::
@@ -21,7 +21,6 @@ plugins:
 
 - 熟悉HTML,CSS,JavaScript,ES6语言基础,熟悉Less和Sass预编译,熟悉**TypeScript**;
 - 熟悉Vue框架,看过Vue部分源码,简单了解其底层原理及其实现,了解React;
-- 熟悉微信小程序开发,熟悉微信小程序发布流程,了解小程序优化;
 - 熟悉Node.js,熟悉Node模块机制,了解Express框架,能进行简单的后端开发;
 - 熟悉HTTP1.0/HTTP1.1协议,了解TCP,UDP协议,DNS解析和CDN等基础知识;
 - 了解常见的Web安全知识,了解前端工程化,了解CICD等,了解微前端技术;
@@ -31,20 +30,11 @@ plugins:
 
 ::::section{.expr-list}
 
-### 成都优享兔科技有限公司
+### 成都量子矩阵科技有限公司 
 
 :::div{.expr-item}
-主要技术栈为微信小程序原生框架和 Python,个人所负责模块如下:
+- 前端工程组
 
-- **配送宝骑手端**:独立负责微信小程序端开发；实现实时通过不同的职位调控改变页面展示,并对其进行性能优化；FCP 从秒级优化至毫秒级；对地理围栏进行研究,并提供相应的解决方案；
-- **项目架构**:从整体到细节与团队一起参与项目架构,从开发到测试,建立业务关系,探讨开发实现难点,以及服务器部署细节,实现后端微服务(内服务与外服务)架构；
-- **功能模块测试**:采用 Python+Faker+Grequests实现对服务器以及对接口进行订单数据 Mock 和高并发压力测试；
-  :::
-
-### 成都触及科技有限公司
-
-:::div{.expr-item}
-主要技术栈为Vue,主要负责公司项目页面开发,基础组件开发,对接条形打印机,实现定制打印;
 :::
 
 ::::
@@ -66,9 +56,10 @@ plugins:
 
 :::div{.project-item}
 
-- **项目简介**:支持从Markdown实现简历编写，提供快捷的编写方式，支持添加插件
-- **解决问题**:**插件化**、**在线编辑**、**样式注入**。
-  :::
+- **项目简介**:以最简单的方式来写好简历，**专注内容，让内容更加直接**，**简单高效，让求职更加简单**，简洁且灵活的插件化配置。
+- **解决问题**: 实现**插件化**管理，定义插件 Schema 。采用防抖技术，避免多次无用更新。
+
+:::
 
 ## :span[校园经历]{.title.uni}
 
