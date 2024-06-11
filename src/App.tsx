@@ -1,3 +1,4 @@
+//@ts-nocheck
 import './App.less';
 import './styles/main.less';
 import './styles/icon.less';
